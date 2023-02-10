@@ -1,0 +1,90 @@
+{
+  "frames": [
+    {
+      "filename": "Esther Colour",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 154,
+        "h": 251
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 2,
+        "w": 154,
+        "h": 251
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hannah Colour",
+      "frame": {
+        "x": 0,
+        "y": 251,
+        "w": 145,
+        "h": 250
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 3,
+        "w": 145,
+        "h": 250
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Girl 1",
+      "frame": {
+        "x": 0,
+        "y": 501,
+        "w": 150,
+        "h": 239
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 10,
+        "w": 150,
+        "h": 239
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "characters-2.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 154,
+      "h": 740
+    },
+    "scale": 1
+  }
+}

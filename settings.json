@@ -1,0 +1,54 @@
+{
+    "pictures": 26,
+    "preserveLines": true,
+    "adMobInterstitialId": "",
+    "clipartCategories": [
+        {
+            "key": "characters",
+            "icon": "assets/images/clipart/clipart_people.png",
+
+            "sprites": {
+                "name": "characters",
+                "path": "assets/images/clipart",
+                "count": 2
+            }
+        },
+        {
+            "key": "objects",
+            "icon": "assets/images/clipart/clipart_objects.png",
+            "sprites": {
+                "name": "objects",
+                "path": "assets/images/clipart",
+                "count": 1
+            }
+        },
+        {
+            "key": "animals",
+            "icon": "assets/images/clipart/clipart_animals.png",
+            "sprites": {
+                "name": "animals",
+                "path": "assets/images/clipart",
+                "count": 1
+            }
+
+        },
+        {
+            "key": "angels",
+            "icon": "assets/images/clipart/clipart_angels.png",
+            "sprites": {
+                "name": "angels",
+                "path": "assets/images/clipart",
+                "count": 1
+            }
+        },
+        {
+            "key": "other",
+            "icon": "assets/images/clipart/clipart_other.png",
+            "sprites": {
+                "name": "other",
+                "path": "assets/images/clipart",
+                "count": 1
+            }
+        }
+    ]
+}
