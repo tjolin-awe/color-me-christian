@@ -18,12 +18,16 @@ class StudioLoadState {
         categories.forEach(resource => {
             this.game.load.image(`clipart_${resource.key}`, `${resource.icon}`);          
             for (let i = 0; i < resource.sprites.count; i++) {
+
+               
                 this.game.load.json(`json_${resource.key}-${i}`, `${resource.sprites.path}/${resource.key}-${i}.json`);
                 this.game.load.atlas(`${resource.key}-${i}`, 
                                      `${resource.sprites.path}/${resource.key}-${i}.png`, 
                                      `${resource.sprites.path}/${resource.key}-${i}.json`); 
             }
         });
+
+     
     }
 
     create() {

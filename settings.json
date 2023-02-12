@@ -10,7 +10,7 @@
             "sprites": {
                 "name": "characters",
                 "path": "assets/images/clipart",
-                "count": 2
+                "count": 3
             }
         },
         {
@@ -19,7 +19,7 @@
             "sprites": {
                 "name": "objects",
                 "path": "assets/images/clipart",
-                "count": 1
+                "count": 2
             }
         },
         {

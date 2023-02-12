@@ -194,6 +194,7 @@ class BoxSquare extends Phaser.Sprite {
     }
     onDragStop(sprite, pointer) {
         console.log('onDragStop');
+        this.boundingBox.resizeClipArt();
     }
 
 

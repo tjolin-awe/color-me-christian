@@ -32,7 +32,7 @@ function startGame() {
     let game = new Phaser.Game(
         config.gameWidth,
         config.gameHeight,
-        Phaser.CANVAS,
+        Phaser.WEBGL,
         config.gameParentElementId
     );
 

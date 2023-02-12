@@ -88,10 +88,16 @@ class BoundingBox {
      
 
         if (!this.preserveRatio) { 
-            this.clipart.x = this.topLeftHandle.x + 10;
-            this.clipart.y = this.topLeftHandle.y + 10;     
-            this.clipart.width = Math.abs((this.topRightHandle.x - 10) - (this.topLeftHandle.x + 10));
-            this.clipart.height = Math.abs((this.bottomRightHandle.y - 10)- (this.topRightHandle.y + 10));
+            this.clipart.x = this.topLeftHandle.x;
+            this.clipart.y = this.topLeftHandle.y;    
+
+
+            
+            this.clipart.width = Math.abs((this.topRightHandle.x) - (this.topLeftHandle.x));
+            this.clipart.height = Math.abs((this.bottomRightHandle.y)- (this.topRightHandle.y));
+            
+            
+
         } else {
 
 
@@ -144,7 +150,7 @@ class BoundingBox {
        // this.clipart.bringToTop();
         this.handles.visible = true;
         
-        this.update();
+        this.updatePositions();
         this.bringToTop();
 
        
@@ -247,16 +253,13 @@ class BoundingBox {
 
     onPaint(button, pointer){
 
-    
-        
-
         if (!this.clipart) 
             return;
 
         this.handles.visible = false;
         this.clipart.inputEnabled = false;
-        //this.clipart.stage.updateTransform();
-        this.game.bmd.draw(this.clipart, this.clipart.x, this.clipart.y);
+
+        this.game.bmd.draw(this.clipart);
         this.game.bmd.update();
             
         this.clipart.kill();
@@ -267,7 +270,7 @@ class BoundingBox {
     
     }
 
-    update() {
+    updatePositions() {
         this.topRightHandle.x = this.clipart.x + this.clipart.width + 10;
         this.topRightHandle.y = this.clipart.y - 10; 
 

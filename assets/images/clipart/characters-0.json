@@ -1,19 +1,19 @@
 {
   "frames": [
     {
-      "filename": "Jesus Baby Colour 4",
+      "filename": "Abigal Colour",
       "frame": {
         "x": 0,
         "y": 0,
-        "w": 252,
+        "w": 256,
         "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 2,
+        "x": 0,
         "y": 0,
-        "w": 252,
+        "w": 256,
         "h": 256
       },
       "sourceSize": {
@@ -26,19 +26,19 @@
       }
     },
     {
-      "filename": "Moses",
+      "filename": "Abner Colour",
       "frame": {
         "x": 0,
         "y": 256,
-        "w": 251,
+        "w": 256,
         "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 3,
+        "x": 0,
         "y": 0,
-        "w": 251,
+        "w": 256,
         "h": 256
       },
       "sourceSize": {
@@ -51,19 +51,19 @@
       }
     },
     {
-      "filename": "Wiseman 2 Colour",
+      "filename": "Abraham",
       "frame": {
         "x": 0,
         "y": 512,
-        "w": 250,
+        "w": 256,
         "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 4,
+        "x": 0,
         "y": 0,
-        "w": 250,
+        "w": 256,
         "h": 256
       },
       "sourceSize": {
@@ -76,19 +76,19 @@
       }
     },
     {
-      "filename": "Gideon",
+      "filename": "Absalom Colour",
       "frame": {
         "x": 0,
         "y": 768,
-        "w": 246,
+        "w": 256,
         "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 6,
+        "x": 0,
         "y": 0,
-        "w": 246,
+        "w": 256,
         "h": 256
       },
       "sourceSize": {
@@ -101,19 +101,19 @@
       }
     },
     {
-      "filename": "Deborah",
+      "filename": "Adam & Eve Colour",
       "frame": {
         "x": 0,
         "y": 1024,
-        "w": 238,
+        "w": 256,
         "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 10,
+        "x": 0,
         "y": 0,
-        "w": 238,
+        "w": 256,
         "h": 256
       },
       "sourceSize": {
@@ -126,19 +126,19 @@
       }
     },
     {
-      "filename": "High Priest",
+      "filename": "Adam Eve Innocent",
       "frame": {
         "x": 0,
         "y": 1280,
-        "w": 232,
+        "w": 256,
         "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 13,
+        "x": 0,
         "y": 0,
-        "w": 232,
+        "w": 256,
         "h": 256
       },
       "sourceSize": {
@@ -151,19 +151,19 @@
       }
     },
     {
-      "filename": "Sampson",
+      "filename": "Ahab Colour",
       "frame": {
         "x": 0,
         "y": 1536,
-        "w": 225,
+        "w": 256,
         "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 16,
+        "x": 0,
         "y": 0,
-        "w": 225,
+        "w": 256,
         "h": 256
       },
       "sourceSize": {
@@ -176,19 +176,19 @@
       }
     },
     {
-      "filename": "Pharoah",
+      "filename": "Amalekite Raider Colour",
       "frame": {
         "x": 0,
         "y": 1792,
-        "w": 224,
+        "w": 256,
         "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 16,
+        "x": 0,
         "y": 0,
-        "w": 224,
+        "w": 256,
         "h": 256
       },
       "sourceSize": {
@@ -201,19 +201,19 @@
       }
     },
     {
-      "filename": "Jesus on Donkey Colour",
+      "filename": "Apostle Paul",
       "frame": {
-        "x": 224,
-        "y": 1792,
-        "w": 220,
+        "x": 256,
+        "y": 0,
+        "w": 256,
         "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 18,
+        "x": 0,
         "y": 0,
-        "w": 220,
+        "w": 256,
         "h": 256
       },
       "sourceSize": {
@@ -226,219 +226,19 @@
       }
     },
     {
-      "filename": "Sarah",
+      "filename": "Asahel Colour",
       "frame": {
-        "x": 444,
-        "y": 1792,
-        "w": 210,
-        "h": 256
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 24,
+        "x": 512,
         "y": 0,
-        "w": 210,
-        "h": 256
-      },
-      "sourceSize": {
         "w": 256,
         "h": 256
       },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Job's Wife Colour",
-      "frame": {
-        "x": 225,
-        "y": 1536,
-        "w": 209,
-        "h": 256
-      },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 23,
+        "x": 0,
         "y": 0,
-        "w": 209,
-        "h": 256
-      },
-      "sourceSize": {
         "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Joseph Mary Colour",
-      "frame": {
-        "x": 434,
-        "y": 1536,
-        "w": 209,
-        "h": 256
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 23,
-        "y": 0,
-        "w": 209,
-        "h": 256
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Jezebel Colour",
-      "frame": {
-        "x": 232,
-        "y": 1280,
-        "w": 200,
-        "h": 256
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 28,
-        "y": 0,
-        "w": 200,
-        "h": 256
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Roman Soldier Colour",
-      "frame": {
-        "x": 432,
-        "y": 1280,
-        "w": 192,
-        "h": 256
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 31,
-        "y": 0,
-        "w": 192,
-        "h": 256
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Lazarus risen Colour",
-      "frame": {
-        "x": 238,
-        "y": 1024,
-        "w": 189,
-        "h": 256
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 34,
-        "y": 0,
-        "w": 189,
-        "h": 256
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "David King",
-      "frame": {
-        "x": 427,
-        "y": 1024,
-        "w": 179,
-        "h": 256
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 37,
-        "y": 0,
-        "w": 179,
-        "h": 256
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Queen Sheba Colour",
-      "frame": {
-        "x": 246,
-        "y": 768,
-        "w": 177,
-        "h": 256
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 40,
-        "y": 0,
-        "w": 177,
-        "h": 256
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Jesus Ascending Colour",
-      "frame": {
-        "x": 423,
-        "y": 768,
-        "w": 176,
-        "h": 256
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 40,
-        "y": 0,
-        "w": 176,
         "h": 256
       },
       "sourceSize": {
@@ -453,17 +253,117 @@
     {
       "filename": "Bathsheba Colour",
       "frame": {
-        "x": 250,
-        "y": 512,
-        "w": 171,
+        "x": 768,
+        "y": 0,
+        "w": 256,
         "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 43,
+        "x": 0,
         "y": 0,
-        "w": 171,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Benaiah Colour",
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Boaz Colour",
+      "frame": {
+        "x": 1280,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Boy 1",
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Boy 2",
+      "frame": {
+        "x": 1792,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
         "h": 256
       },
       "sourceSize": {
@@ -478,17 +378,242 @@
     {
       "filename": "Daniel",
       "frame": {
-        "x": 421,
-        "y": 512,
-        "w": 167,
+        "x": 256,
+        "y": 256,
+        "w": 256,
         "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 44,
+        "x": 0,
         "y": 0,
-        "w": 167,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "David King",
+      "frame": {
+        "x": 256,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "David Shepherd Colour",
+      "frame": {
+        "x": 256,
+        "y": 768,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "David Warrior Colour",
+      "frame": {
+        "x": 256,
+        "y": 1024,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "David",
+      "frame": {
+        "x": 256,
+        "y": 1280,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Davids Mighty Men Colour",
+      "frame": {
+        "x": 256,
+        "y": 1536,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Deborah",
+      "frame": {
+        "x": 256,
+        "y": 1792,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Delilah",
+      "frame": {
+        "x": 512,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Demon Possessed Man Colour",
+      "frame": {
+        "x": 768,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Egypt Guard",
+      "frame": {
+        "x": 1024,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
         "h": 256
       },
       "sourceSize": {
@@ -503,17 +628,617 @@
     {
       "filename": "Egypt Queen",
       "frame": {
-        "x": 251,
+        "x": 1280,
         "y": 256,
-        "w": 154,
+        "w": 256,
         "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 51,
+        "x": 0,
         "y": 0,
-        "w": 154,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Elijah 2",
+      "frame": {
+        "x": 1536,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Elijah Colour",
+      "frame": {
+        "x": 1792,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Elijah Running Colour",
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Elisha Body",
+      "frame": {
+        "x": 512,
+        "y": 768,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Elisha the Prophet Colour",
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Esther Colour",
+      "frame": {
+        "x": 512,
+        "y": 1280,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Gideon",
+      "frame": {
+        "x": 512,
+        "y": 1536,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Girl 1",
+      "frame": {
+        "x": 512,
+        "y": 1792,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Girl 2",
+      "frame": {
+        "x": 768,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Goliath Colour",
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Goliath Giant Colour",
+      "frame": {
+        "x": 1280,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Good Samaritan Colour",
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hannah Colour",
+      "frame": {
+        "x": 1792,
+        "y": 512,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Herod A Colour",
+      "frame": {
+        "x": 768,
+        "y": 768,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Herod Colour",
+      "frame": {
+        "x": 768,
+        "y": 1024,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "High Priest",
+      "frame": {
+        "x": 768,
+        "y": 1280,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Isaac",
+      "frame": {
+        "x": 768,
+        "y": 1536,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Ishbosheth Colour",
+      "frame": {
+        "x": 768,
+        "y": 1792,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Jacob",
+      "frame": {
+        "x": 1024,
+        "y": 768,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Jehu Colour",
+      "frame": {
+        "x": 1280,
+        "y": 768,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Jesus Ascending Colour",
+      "frame": {
+        "x": 1536,
+        "y": 768,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Jesus Baby Colour 2",
+      "frame": {
+        "x": 1792,
+        "y": 768,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Jesus Baby Colour 3",
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Jesus Baby Colour 4",
+      "frame": {
+        "x": 1024,
+        "y": 1280,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
         "h": 256
       },
       "sourceSize": {
@@ -528,18 +1253,18 @@
     {
       "filename": "Jesus Baby Colour",
       "frame": {
-        "x": 252,
+        "x": 1024,
+        "y": 1536,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
         "y": 0,
-        "w": 252,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 2,
-        "y": 1,
-        "w": 252,
-        "h": 255
+        "w": 256,
+        "h": 256
       },
       "sourceSize": {
         "w": 256,
@@ -551,45 +1276,20 @@
       }
     },
     {
-      "filename": "Peter Colour",
+      "filename": "Jesus Baptism 1",
       "frame": {
-        "x": 405,
-        "y": 255,
-        "w": 247,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 5,
-        "y": 1,
-        "w": 247,
-        "h": 255
-      },
-      "sourceSize": {
+        "x": 1024,
+        "y": 1792,
         "w": 256,
         "h": 256
       },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Solomon Colour",
-      "frame": {
-        "x": 504,
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
         "y": 0,
-        "w": 247,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 5,
-        "y": 1,
-        "w": 247,
-        "h": 255
+        "w": 256,
+        "h": 256
       },
       "sourceSize": {
         "w": 256,
@@ -601,495 +1301,45 @@
       }
     },
     {
-      "filename": "Jacob",
+      "filename": "Jesus Baptism 2",
       "frame": {
-        "x": 751,
+        "x": 1280,
+        "y": 1024,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
         "y": 0,
-        "w": 231,
-        "h": 255
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Jesus Breaking Bread Colour",
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 256,
+        "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 13,
+        "x": 0,
         "y": 0,
-        "w": 231,
-        "h": 255
-      },
-      "sourceSize": {
         "w": 256,
         "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Jesus Teaching Colour",
-      "frame": {
-        "x": 588,
-        "y": 510,
-        "w": 214,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 22,
-        "y": 1,
-        "w": 214,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Moses Baby",
-      "frame": {
-        "x": 652,
-        "y": 255,
-        "w": 213,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 21,
-        "y": 0,
-        "w": 213,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Egypt Guard",
-      "frame": {
-        "x": 599,
-        "y": 765,
-        "w": 212,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 25,
-        "y": 1,
-        "w": 212,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Pharisee Colour",
-      "frame": {
-        "x": 802,
-        "y": 510,
-        "w": 204,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 25,
-        "y": 1,
-        "w": 204,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Martha Colour",
-      "frame": {
-        "x": 865,
-        "y": 255,
-        "w": 200,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 28,
-        "y": 0,
-        "w": 200,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Jesus on Cross Colour",
-      "frame": {
-        "x": 1006,
-        "y": 0,
-        "w": 188,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 34,
-        "y": 1,
-        "w": 188,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Moses Eygpt",
-      "frame": {
-        "x": 1194,
-        "y": 0,
-        "w": 188,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 34,
-        "y": 1,
-        "w": 188,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "LazarusPoor",
-      "frame": {
-        "x": 606,
-        "y": 1020,
-        "w": 184,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 36,
-        "y": 0,
-        "w": 184,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Joshua",
-      "frame": {
-        "x": 624,
-        "y": 1275,
-        "w": 182,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 38,
-        "y": 1,
-        "w": 182,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Wiseman 1 Colour",
-      "frame": {
-        "x": 790,
-        "y": 1020,
-        "w": 175,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 41,
-        "y": 0,
-        "w": 175,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Mary Martha sister Colour",
-      "frame": {
-        "x": 811,
-        "y": 765,
-        "w": 174,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 41,
-        "y": 0,
-        "w": 174,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Judas Colour",
-      "frame": {
-        "x": 985,
-        "y": 765,
-        "w": 166,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 45,
-        "y": 0,
-        "w": 166,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Ahab Colour",
-      "frame": {
-        "x": 1006,
-        "y": 510,
-        "w": 149,
-        "h": 255
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 54,
-        "y": 1,
-        "w": 149,
-        "h": 255
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Joseph PM",
-      "frame": {
-        "x": 1155,
-        "y": 510,
-        "w": 241,
-        "h": 254
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 8,
-        "y": 1,
-        "w": 241,
-        "h": 254
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Shepherd Colour",
-      "frame": {
-        "x": 1396,
-        "y": 510,
-        "w": 239,
-        "h": 254
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 9,
-        "y": 1,
-        "w": 239,
-        "h": 254
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Jesus Baby Colour 2",
-      "frame": {
-        "x": 1065,
-        "y": 255,
-        "w": 237,
-        "h": 254
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 9,
-        "y": 2,
-        "w": 237,
-        "h": 254
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Wounded Man Colour",
-      "frame": {
-        "x": 1302,
-        "y": 255,
-        "w": 230,
-        "h": 254
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 14,
-        "y": 2,
-        "w": 230,
-        "h": 254
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "David Shepherd Colour",
-      "frame": {
-        "x": 1382,
-        "y": 0,
-        "w": 227,
-        "h": 254
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 15,
-        "y": 1,
-        "w": 227,
-        "h": 254
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Nebuchadnezzar",
-      "frame": {
-        "x": 1532,
-        "y": 254,
-        "w": 224,
-        "h": 254
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 16,
-        "y": 1,
-        "w": 224,
-        "h": 254
       },
       "sourceSize": {
         "w": 256,
@@ -1103,18 +1353,43 @@
     {
       "filename": "Jesus Christ Transfigured",
       "frame": {
-        "x": 1609,
+        "x": 1792,
+        "y": 1024,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
         "y": 0,
-        "w": 222,
-        "h": 254
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Jesus Christ",
+      "frame": {
+        "x": 1280,
+        "y": 1280,
+        "w": 256,
+        "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 18,
+        "x": 0,
         "y": 0,
-        "w": 222,
-        "h": 254
+        "w": 256,
+        "h": 256
       },
       "sourceSize": {
         "w": 256,
@@ -1126,20 +1401,20 @@
       }
     },
     {
-      "filename": "Nabal Colour",
+      "filename": "Jesus Fishing Colour",
       "frame": {
-        "x": 1831,
+        "x": 1280,
+        "y": 1536,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
         "y": 0,
-        "w": 214,
-        "h": 250
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 23,
-        "y": 3,
-        "w": 214,
-        "h": 250
+        "w": 256,
+        "h": 256
       },
       "sourceSize": {
         "w": 256,
@@ -1151,20 +1426,20 @@
       }
     },
     {
-      "filename": "Isaac",
+      "filename": "Jesus Healing",
       "frame": {
-        "x": 1831,
-        "y": 250,
-        "w": 214,
-        "h": 236
+        "x": 1280,
+        "y": 1792,
+        "w": 256,
+        "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 22,
-        "y": 18,
-        "w": 214,
-        "h": 236
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
       },
       "sourceSize": {
         "w": 256,
@@ -1176,20 +1451,20 @@
       }
     },
     {
-      "filename": "Wiseman 3 Colour",
+      "filename": "Jesus In The Air",
       "frame": {
-        "x": 643,
-        "y": 1530,
-        "w": 219,
-        "h": 254
+        "x": 1536,
+        "y": 1280,
+        "w": 256,
+        "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 19,
-        "y": 1,
-        "w": 219,
-        "h": 254
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
       },
       "sourceSize": {
         "w": 256,
@@ -1201,20 +1476,20 @@
       }
     },
     {
-      "filename": "Abraham",
+      "filename": "Jesus Judge Not",
       "frame": {
-        "x": 806,
-        "y": 1275,
-        "w": 210,
-        "h": 254
+        "x": 1792,
+        "y": 1280,
+        "w": 256,
+        "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 24,
-        "y": 1,
-        "w": 210,
-        "h": 254
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
       },
       "sourceSize": {
         "w": 256,
@@ -1226,20 +1501,20 @@
       }
     },
     {
-      "filename": "Jesus Washing Colour",
+      "filename": "Jesus Lamb of God",
       "frame": {
-        "x": 965,
-        "y": 1020,
-        "w": 204,
-        "h": 254
+        "x": 1536,
+        "y": 1536,
+        "w": 256,
+        "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 26,
-        "y": 1,
-        "w": 204,
-        "h": 254
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
       },
       "sourceSize": {
         "w": 256,
@@ -1251,20 +1526,20 @@
       }
     },
     {
-      "filename": "Apostle Paul",
+      "filename": "Jesus Loaves and fish Colour",
       "frame": {
-        "x": 1151,
-        "y": 765,
-        "w": 197,
-        "h": 254
+        "x": 1536,
+        "y": 1792,
+        "w": 256,
+        "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 30,
-        "y": 1,
-        "w": 197,
-        "h": 254
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
       },
       "sourceSize": {
         "w": 256,
@@ -1276,20 +1551,20 @@
       }
     },
     {
-      "filename": "Jesus Baby Colour 3",
+      "filename": "Jesus On Trial Colour",
       "frame": {
-        "x": 654,
-        "y": 1784,
-        "w": 187,
-        "h": 254
+        "x": 1792,
+        "y": 1536,
+        "w": 256,
+        "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 33,
-        "y": 2,
-        "w": 187,
-        "h": 254
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
       },
       "sourceSize": {
         "w": 256,
@@ -1301,645 +1576,20 @@
       }
     },
     {
-      "filename": "Teacher Colour",
+      "filename": "Jesus Pointing 2",
       "frame": {
-        "x": 841,
-        "y": 1784,
-        "w": 185,
-        "h": 254
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 34,
-        "y": 1,
-        "w": 185,
-        "h": 254
-      },
-      "sourceSize": {
+        "x": 1792,
+        "y": 1792,
         "w": 256,
         "h": 256
       },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "People in Hell 2",
-      "frame": {
-        "x": 862,
-        "y": 1529,
-        "w": 184,
-        "h": 254
-      },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 36,
-        "y": 1,
-        "w": 184,
-        "h": 254
-      },
-      "sourceSize": {
+        "x": 0,
+        "y": 0,
         "w": 256,
         "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Lazarus Colour",
-      "frame": {
-        "x": 1026,
-        "y": 1274,
-        "w": 181,
-        "h": 254
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 38,
-        "y": 1,
-        "w": 181,
-        "h": 254
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Jesus on White Horse Colour",
-      "frame": {
-        "x": 1207,
-        "y": 1274,
-        "w": 173,
-        "h": 254
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 41,
-        "y": 1,
-        "w": 173,
-        "h": 254
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Goliath Giant Colour",
-      "frame": {
-        "x": 1380,
-        "y": 1274,
-        "w": 172,
-        "h": 254
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 42,
-        "y": 1,
-        "w": 172,
-        "h": 254
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Delilah",
-      "frame": {
-        "x": 1169,
-        "y": 1019,
-        "w": 154,
-        "h": 254
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 52,
-        "y": 1,
-        "w": 154,
-        "h": 254
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Mary Magdalene Colour",
-      "frame": {
-        "x": 1323,
-        "y": 1019,
-        "w": 151,
-        "h": 254
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 52,
-        "y": 1,
-        "w": 151,
-        "h": 254
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Good Samaritan Colour",
-      "frame": {
-        "x": 1348,
-        "y": 764,
-        "w": 248,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 4,
-        "y": 1,
-        "w": 248,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "David",
-      "frame": {
-        "x": 1474,
-        "y": 1017,
-        "w": 237,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 11,
-        "y": 1,
-        "w": 237,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Amalekite Raider Colour",
-      "frame": {
-        "x": 1596,
-        "y": 764,
-        "w": 227,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 15,
-        "y": 1,
-        "w": 227,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Jehu Colour",
-      "frame": {
-        "x": 1823,
-        "y": 508,
-        "w": 225,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 17,
-        "y": 2,
-        "w": 225,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Priest Uzzah Colour",
-      "frame": {
-        "x": 1823,
-        "y": 761,
-        "w": 224,
-        "h": 251
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 16,
-        "y": 2,
-        "w": 224,
-        "h": 251
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Boaz Colour",
-      "frame": {
-        "x": 1635,
-        "y": 508,
-        "w": 161,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 48,
-        "y": 1,
-        "w": 161,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Ishbosheth Colour",
-      "frame": {
-        "x": 1026,
-        "y": 1783,
-        "w": 227,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 13,
-        "y": 1,
-        "w": 227,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "John the Baptist",
-      "frame": {
-        "x": 1046,
-        "y": 1528,
-        "w": 226,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 15,
-        "y": 2,
-        "w": 226,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "People in Hell 1",
-      "frame": {
-        "x": 1823,
-        "y": 1012,
-        "w": 212,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 20,
-        "y": 3,
-        "w": 212,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Mary Jesus Colour",
-      "frame": {
-        "x": 1253,
-        "y": 1781,
-        "w": 205,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 27,
-        "y": 2,
-        "w": 205,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Ruth Colour",
-      "frame": {
-        "x": 1272,
-        "y": 1528,
-        "w": 202,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 29,
-        "y": 1,
-        "w": 202,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "David Warrior Colour",
-      "frame": {
-        "x": 1458,
-        "y": 1781,
-        "w": 200,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 28,
-        "y": 1,
-        "w": 200,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Mary Colour",
-      "frame": {
-        "x": 1474,
-        "y": 1528,
-        "w": 143,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 58,
-        "y": 1,
-        "w": 143,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Mary Old Colour",
-      "frame": {
-        "x": 1552,
-        "y": 1270,
-        "w": 143,
-        "h": 253
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 58,
-        "y": 1,
-        "w": 143,
-        "h": 253
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Job Sick Colour",
-      "frame": {
-        "x": 1617,
-        "y": 1523,
-        "w": 253,
-        "h": 252
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 2,
-        "y": 2,
-        "w": 253,
-        "h": 252
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Rich Man Colour",
-      "frame": {
-        "x": 1695,
-        "y": 1270,
-        "w": 253,
-        "h": 252
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 1,
-        "y": 2,
-        "w": 253,
-        "h": 252
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Boy 2",
-      "frame": {
-        "x": 1870,
-        "y": 1522,
-        "w": 176,
-        "h": 246
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 41,
-        "y": 4,
-        "w": 176,
-        "h": 246
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Boy 1",
-      "frame": {
-        "x": 1870,
-        "y": 1768,
-        "w": 176,
-        "h": 244
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 42,
-        "y": 9,
-        "w": 176,
-        "h": 244
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    {
-      "filename": "Girl 2",
-      "frame": {
-        "x": 1658,
-        "y": 1775,
-        "w": 212,
-        "h": 246
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 23,
-        "y": 4,
-        "w": 212,
-        "h": 246
       },
       "sourceSize": {
         "w": 256,
@@ -1953,18 +1603,18 @@
     {
       "filename": "Shepherd Boy Colour",
       "frame": {
-        "x": 1382,
-        "y": 0,
-        "w": 227,
-        "h": 254
+        "x": 256,
+        "y": 768,
+        "w": 256,
+        "h": 256
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 15,
-        "y": 1,
-        "w": 227,
-        "h": 254
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
       },
       "sourceSize": {
         "w": 256,

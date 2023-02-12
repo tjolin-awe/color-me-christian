@@ -108,7 +108,7 @@ class ClipartSelector extends Phaser.Sprite {
 
     onLoadComplete(category) {
 
-        this.clips = this.getClips(category.key, category.count);
+        this.clips = this.getClips(category.key, category.sprites.count);
         
         let offsetX = 50;
         let offsetY = 50;

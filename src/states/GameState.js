@@ -15,40 +15,32 @@ class GameState {
     }
 
     create() {
-        
-        
-        //  Textured paper background
-        this.paper = this.add.sprite(0, 0, 'paper');
-        
+
+ 
+     
         this.game.gui = new GUI(this.game, this.saveImage, this);
 
         this.game.stage.backgroundColor = '#fff';
         this.bmd = this.game.make.bitmapData(this.game.world.width - 320, 720);
-        this.bmdContainer = this.bmd.addToWorld();
+        this.bmdContainer = this.bmd.addToWorld(0,0);
         this.game.bmdContainer = this.bmdContainer;
         this.game.bmd = this.bmd;
-
-
-
-
-
-           //  This applies a small alpha to the image, allowing you to see
-        //  the paper texture through it. You can remove this depending
-        //  on what your requirements are.
-        
-
 
         //  Enable input for this sprite, so we can tell when it's clicked.
         this.bmdContainer.inputEnabled = true;      
         this.bmdContainer.events.onInputDown.add(this.fill, this);
 
         this.game.input.addMoveCallback(this.paint, this);
-
-        
    
         this.bmd.fill(255, 255, 255, 1);
+
         if (this.game.currentPicture) {
-            console.log(this.game.currentPicture);
+        
+         
+            //  Textured paper background
+            let paper = this.add.sprite(0, 0, 'paper');
+            this.game.world.sendToBack(paper);
+        
             this.bmdContainer.alpha = 0.7;
             this.key =  `picture${this.game.currentPicture}`;
 
@@ -62,14 +54,6 @@ class GameState {
             overlay.alpha = this.bmdContainer.alpha;
             this.bmd.draw(`picture${this.game.currentPicture}`, 0, 0);
         }
-      
-      /*  if (this.game.currentPicture)     
-            this.bmd.load(this.key);*/
-
-       // this.game.gui.initClipArt(this);
-          
-
-        //this.game.activeClipart = new Phaser.Group();
   
         this.game.boundingBox = new BoundingBox(this.game, 'box', this);
 
@@ -121,15 +105,12 @@ class GameState {
     }
 
     selectClipArt(clipart, pointer) {
-
- 
        
         let clone = new ClipArt(this.game, this.game.bmdContainer.width / 2 , this.game.bmdContainer.height / 2, clipart.lazyload_texture, clipart.lazyload_frame, pointer, this);
         this.game.boundingBox.captureClipArt(clone);
         this.game.clips.hide();
         this.game.art_sprites.visible = true;
         this.game.art_sprites.addChild(clone);
-
 
     }
 

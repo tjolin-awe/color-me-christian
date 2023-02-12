@@ -19,6 +19,6 @@
     "webpack-cli": "^2.0.12"
   },
   "dependencies": {
-    "phaser-ce": "^2.10.2"
+    "phaser-ce": "^2.20.0"
   }
 }

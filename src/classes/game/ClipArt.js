@@ -1,6 +1,6 @@
 class ClipArt extends Phaser.Sprite {
     constructor(game, x, y, texture, frame, pointer, context) {
-        super(game, x, y, texture, frame);       
+        super(game, x, y, texture,frame);       
 
         this.game.add.existing(this);
        
@@ -10,8 +10,7 @@ class ClipArt extends Phaser.Sprite {
 
         this.identifier = Math.floor(Math.random() * Date.now());
 
-        this.x -= this.width / 2;
-        this.y -= this.height / 2;
+        
         this.context = context;
         this.input.enableDrag(false);
 
@@ -33,7 +32,7 @@ class ClipArt extends Phaser.Sprite {
     }
 
     onDragClipart(clipart, pointer) {
-        this.game.boundingBox.update();
+        this.game.boundingBox.updatePositions();
         
     }
 
