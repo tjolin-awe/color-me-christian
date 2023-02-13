@@ -1,4 +1,5 @@
 let {BoxHandleEnum, BoxSquare} = require('../game/BoxSquare');
+const {GameText} = require('./GameText');
 
 class BoundingBox {
     constructor(game, texture, context) {
@@ -147,6 +148,13 @@ class BoundingBox {
     captureClipArt(clipart) {
         console.log('captureClipArt');
         this.clipart = clipart;
+
+        if (this.clipart instanceof GameText) {
+            this.setRatioLock(true);  // Lock ratio for text by default
+            this.buttonLock.visible = false;
+        } else {
+            this.buttonLock.visible = true;
+        }
        // this.clipart.bringToTop();
         this.handles.visible = true;
         
@@ -198,6 +206,38 @@ class BoundingBox {
             this.buttonLock.loadTexture('box','unlock');
         }
     }
+
+    setRatioLock(value) {
+
+        this.preserveRatio = value;
+        if (this.preserveRatio) {
+            this.buttonLock.loadTexture('box','lock');
+            this.topLeftHandle.loadTexture('box','corner_locked');
+            this.topCenterHandle.loadTexture('box','corner_locked');
+            this.topRightHandle.loadTexture('box','corner_locked');
+            this.leftHandle.loadTexture('box','corner_locked');
+            this.rightHandle.loadTexture('box','corner_locked');
+            this.bottomLeftHandle.loadTexture('box','corner_locked');
+            this.bottomCenterHandle.loadTexture('box','corner_locked');
+            this.bottomRightHandle.loadTexture('box','corner_locked');
+            
+
+        } else {
+           
+            this.buttonLock.loadTexture('box','unlock');
+            this.topLeftHandle.loadTexture('box','corner');
+            this.topCenterHandle.loadTexture('box','corner');
+            this.topRightHandle.loadTexture('box','corner');
+            this.leftHandle.loadTexture('box','corner');
+            this.rightHandle.loadTexture('box','corner');
+            this.bottomLeftHandle.loadTexture('box','corner');
+            this.bottomCenterHandle.loadTexture('box','corner');
+            this.bottomRightHandle.loadTexture('box','corner');
+        }
+
+    }
+
+
     onToggleLock(button, pointer) {
 
       

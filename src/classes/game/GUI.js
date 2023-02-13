@@ -159,6 +159,10 @@ class GUI extends Phaser.Sprite {
        
     }
             
+    setToolText() {
+        this.mode = ActiveToolEnum.TEXT;
+
+    }
 
     setToolFlood() {
         this.mode = ActiveToolEnum.FLOOD;
@@ -171,6 +175,8 @@ class GUI extends Phaser.Sprite {
         this.togglePaintTools(true);
         this.toggleClipTools(false);
     }
+
+   
 
     toggleClipTools(isvisible) {
         this.clipartGroup.visible = isvisible;
@@ -207,16 +213,29 @@ class GUI extends Phaser.Sprite {
 
     initButtons(callback, context) {
      
+        let posY = 420;
+        let buffer = 32;
         //let textBrushes = this.game.add.image(this.width / 2, 450, 'game', 'text_brushes');
-        this.toolPaint = this.game.add.image(this.width /3 -50, 420,'palette');
+        this.toolPaint = this.game.add.image(this.width / 4 - buffer / 2, posY, 'palette');
         this.toolPaint.anchor.setTo(0.5);
-
-        this.toolFlood = this.game.add.image(this.width /2 + 10, 420,'floodfill');
+        this.toolPaint.scale.setTo(0.75);
+        
+        this.toolFlood = this.game.add.image(this.width / 2 - buffer, posY,'floodfill');
         this.toolFlood.anchor.setTo(0.5);
+        this.toolFlood.scale.setTo(0.75);
+      
+      
 
-        this.toolClipArt = this.game.add.image(this.width - 40, 420,'clipart');
+        this.toolClipArt = this.game.add.image(this.width / 2 + buffer, posY,'clipart');
         this.toolClipArt.anchor.setTo(0.5);
+        this.toolClipArt.scale.setTo(0.75);
+      
 
+        this.toolText = this.game.add.image(this.width - this.width / 4 + buffer / 2, posY, 'text');
+        this.toolText.anchor.setTo(0.5);
+      
+        this.toolText.scale.setTo(0.75);
+      
         var style = { font: "bold 16px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" };
 
         //  The Text is positioned at 0, 100
@@ -234,13 +253,17 @@ class GUI extends Phaser.Sprite {
         this.toolClipArt.inputEnabled = true;
         this.toolClipArt.input.useHandCursor = true;
         this.toolClipArt.events.onInputUp.add(this.setToolClipArt, this);
-    
+
+        this.toolText.inputEnabled = true;
+        this.toolText.input.useHandCursor = true;
+        this.toolText.events.onInputUp.add(context.createText, context);
+
 
         this.addChild(this.toolPaint);
         this.addChild(this.toolFlood);
         this.addChild(this.toolClipArt);
-        
-       // this.addChild(this.toolText);
+        this.addChild(this.toolText);
+
       
 
         let offsetY = 650;

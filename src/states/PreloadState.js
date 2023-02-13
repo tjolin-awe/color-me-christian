@@ -22,16 +22,15 @@ class PreloadState {
         // load assets    
         this.game.load.atlasJSONHash('mainMenu', 'assets/images/main_menu.png', 'assets/images/main_menu.json');    
         this.game.load.atlasJSONHash('game', 'assets/images/game.png', 'assets/images/game.json'); 
-        //this.game.load.atlas('clipart_characters', 'assets/images/clipart/characters.png', 'assets/images/clipart/characters.json');   
+     
         this.game.load.image('bg', 'assets/images/mm_background.png');
         this.game.load.image('swatch','assets/images/swatch.png');
         this.game.load.image('selected','assets/images/selected.png');
         this.game.load.image('paper','assets/images/paper.png');
         this.game.load.image('palette','assets/images/palette.png');
         this.game.load.image('floodfill', 'assets/images/floodfill.png');
-        //this.game.load.image('clipart', 'assets/images/clipart.png');
-        //this.game.load.image('corner','assets/images/corner.png');
-        //this.game.load.image('lock', 'assets/images/lock.png');
+        this.game.load.image('text', 'assets/images/text.png');
+
          // load assets    
        this.game.load.image('clipart', 'assets/images/clipart.png');
          this.game.load.atlas('box', 'assets/images/box.png', 'assets/images/box.json');

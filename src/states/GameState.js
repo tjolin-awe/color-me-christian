@@ -3,6 +3,7 @@ let {ClipArt} = require('../classes/game/ClipArt');
 let {BoundingBox} = require('../classes/game/BoundingBox');
 const { ClipartSelector } = require('../classes/game/ClipartSelector');
 require('../components/BitmapDataFloodFill');
+const { GameText} = require('../classes/game/GameText');
 
 class GameState {
     constructor(game) {
@@ -81,6 +82,21 @@ class GameState {
         link.click();
     }
 
+    createText() {
+
+
+        console.log(this.game.gui.color);
+        this.game.gui.setToolText();
+        let style = { font: "bold 16px Arial", fill: `#${this.game.gui.color.substring(2)}`, boundsAlignH: "center", boundsAlignV: "middle" };
+        
+        let text = new GameText(this.game, this.game.bmd.width / 2, this.game.bmd.height / 2, 'Enter text here', style, this);
+       
+        
+        this.game.boundingBox.captureClipArt(text);
+        this.game.art_sprites.visible = true;
+        this.game.art_sprites.addChild(text);
+
+    }
     paint(pointer, x, y) {
         if (pointer.isDown && this.game.gui.mode == ActiveToolEnum.PAINT) {
             let rgb = Phaser.Color.getWebRGB(this.game.gui.color);
@@ -99,6 +115,7 @@ class GameState {
         }
     }
 
+    
 
     openClipArtSelector(category, pointer) {
         this.game.gui.openClipArtSelector(category.name);
@@ -144,6 +161,7 @@ class GameState {
     }
         
 
+
      /**
      * Called when the picture is clicked.
      * 
@@ -156,10 +174,7 @@ class GameState {
      */
      fill(sprite, pointer) {
 
-        if (this.game.gui.mode == ActiveToolEnum.CLIPART)
-        {
-            
-        }
+      
      
         if (this.game.gui.mode == ActiveToolEnum.FLOOD)
         {
@@ -185,6 +200,8 @@ class GameState {
         }
 
     }
+
+   
 }
 
 module.exports = {GameState};
