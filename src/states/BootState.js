@@ -27,8 +27,8 @@ class BootState {
         this.game.load.image('title','assets/images/title.png');
         this.game.load.image('progress', 'assets/images/progress.png');
         this.game.load.json('settings', 'settings.json');
-        this.game.load.json('clips', 'assets/images/clipart/characters.json');
         this.game.load.image('madeby','assets/images/madeby.png');
+
     }
 
     create() {

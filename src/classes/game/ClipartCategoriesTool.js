@@ -20,8 +20,8 @@ class ClipartCategoryTool extends Phaser.Sprite {
         border.anchor.setTo(0.5);
         this.addChild(border);
 
-        this.btnNext = this.game.add.button(120, 0, 'mainMenu', function(){
-        }, this, 'button_up_on', 'button_up_off');
+        this.btnNext = thi,s.game.add.button(120, 0, 'mainMenu', , this, 'button_up_on', 'button_up_off');
+
         
         this.btnNext.anchor.setTo(0.5);
         this.btnNext.angle = 90;

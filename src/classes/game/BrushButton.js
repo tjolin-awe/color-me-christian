@@ -11,6 +11,7 @@ class BrushButton extends Phaser.Sprite {
 
     turnOn() {
         this.loadTexture('game', `${this.type}_${this.size}_on`);
+       
     }
 
     turnOff() {

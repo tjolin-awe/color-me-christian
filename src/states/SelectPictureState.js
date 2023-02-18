@@ -7,7 +7,7 @@ class SelectPictureState {
         this.game.add.image(0, 0, 'bg');
         this.group = this.game.add.group();
         this.pictures = this.game.cache.getJSON('settings').pictures;
-        
+        this.game.noclips = true;
         let offsetX = 50;
         let offsetY = 50;
         let width = 279;

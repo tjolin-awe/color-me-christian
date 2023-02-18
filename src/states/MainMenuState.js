@@ -32,8 +32,9 @@ class MainMenuState {
         let studio = this.game.add.button(this.game.world.centerX, play.y + 190, 'button_studio_on', function(){
             let pictures = this.game.cache.getJSON('settings').pictures;
             this.game.currentPicture = null;
+            this.game.audio.playSound('click');
             this.game.state.start('StudioLoadState');
-           
+            
         }, this, 'button_studio_on', 'button_studio_off');
         studio.anchor.setTo(0.5);
 
@@ -46,6 +47,8 @@ class MainMenuState {
             spriteOff: 'button_music_off'
         })
 
+        this.game.audio.addSound('click');
+    
         
         //this.game.state.start('SelectPictureState');
     }

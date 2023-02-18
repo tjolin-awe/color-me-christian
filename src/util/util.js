@@ -1,6 +1,8 @@
 // dynamically inject fonts into html page and preload them
 function embedFonts(fonts) {
-    if (!fonts || fonts.length === 0) return;
+    if (!fonts || fonts.length === 0) 
+        return;
+        
     var style = fonts.pop();
 
     var newStyle = document.createElement('style');

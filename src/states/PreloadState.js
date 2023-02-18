@@ -38,7 +38,10 @@ class PreloadState {
         this.game.load.image('button_studio_on', 'assets/images/button_studio_on.png');
         this.game.load.image('button_studio_off', 'assets/images/button_studio_off.png');
         this.game.audio.loadAudio('ost', 'ost');
-
+        this.game.audio.loadAudio('click', 'click');
+        this.game.load.image('font_icon_on','assets/images/font_on.png');
+        this.game.load.image('font_icon_off','assets/images/font_off.png');
+        this.game.load.image('tool_border', 'assets/images/tool_border.png');
         // pictures
         let pictures = this.game.cache.getJSON('settings').pictures;
         for (let i = 0; i < pictures; i++) {
@@ -51,6 +54,7 @@ class PreloadState {
     create() {
         this.game.audio.addMusic('ost');
         this.game.audio.playMusic('ost');
+      
 
     
         this.time.events.add(3000, function () {

@@ -12,6 +12,7 @@ let {GameState} = require('./states/GameState');
 let {SelectPictureState} = require('./states/SelectPictureState');
 let {StudioLoadState} = require('./states/StudioLoadState');
 
+
 // embed fonts to the page
 embedFonts(fonts);
 

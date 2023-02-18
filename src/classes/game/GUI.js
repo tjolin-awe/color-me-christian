@@ -2,6 +2,7 @@ let {ColorButton} = require('./ColorButton');
 let {BrushButton} = require('./BrushButton');
 const { ClipartCategoryTool } = require('./ClipartCategoriesTool');
 const { ClipartSelector} = require('./ClipartSelector');
+const { FontTool} = require('./FontTool');
 
 const ActiveToolEnum = {
     PAINT: 1,
@@ -19,11 +20,29 @@ class GUI extends Phaser.Sprite {
         this.initBrushes();
         this.initColors();
         this.initButtons(callback, context)
-        this.initClipArt(context);
+
+        if (!this.game.noclips)
+            this.initClipart(context);
+        this.initFonts(context);
         this.mode = ActiveToolEnum.PAINT;
     }
 
   
+    initFonts(context) {
+
+    
+        const fonts = this.game.cache.getJSON('settings').fonts;
+     
+       
+        console.log(fonts);
+        let offsetX = this.width / 2 + 5, offsetY = 550;
+
+        this.fontGroup = this.game.add.group();
+        this.fontTool = new FontTool(this.game, offsetX, offsetY, fonts, context);
+        this.fontGroup.addChild(this.fontTool);
+        this.fontGroup.visible = false;
+        this.addChild(this.fontGroup);
+    }
     
     initColors() {
         let textColors = this.game.add.image(this.width / 2, 25, 'game', 'text_colors');
@@ -94,7 +113,7 @@ class GUI extends Phaser.Sprite {
 
       
         this.selectedColor.turnOn();
-        
+        this.game.audio.playSound('click');
         
         //this.updateBrushesTint();
     }
@@ -135,11 +154,11 @@ class GUI extends Phaser.Sprite {
     }
 
 
-    openClipArtSelector(key) {
+    openClipartSelector(key) {
      this.game.world.bringToTop(this.game.clips);
         
     if (this.game.boundingBox)
-    this.game.boundingBox.releaseClipart();
+        this.game.boundingBox.releaseClipart();
 
 
     if (this.game.art_sprites)
@@ -149,11 +168,14 @@ class GUI extends Phaser.Sprite {
     //this.toggleClipTools(true);
     }
     
-    setToolClipArt() {
+    setToolClipart() {
         this.mode = ActiveToolEnum.CLIPART;
+        this.setToolBorder(this.toolClipart);
+        this.game.audio.playSound('click');
         this.togglePaintTools(false);
-
+        this.toggleTextTools(false);
         this.toggleClipTools(true);
+        this.toggleFloodTools(false);
 
         return;
        
@@ -161,35 +183,59 @@ class GUI extends Phaser.Sprite {
             
     setToolText() {
         this.mode = ActiveToolEnum.TEXT;
-
+        this.setToolBorder(this.toolText);
+        this.game.audio.playSound('click');
+        this.toggleClipTools(false);
+        this.togglePaintTools(false);
+        this.toggleTextTools(true);
+        this.toggleFloodTools(false);
     }
 
     setToolFlood() {
         this.mode = ActiveToolEnum.FLOOD;
+        this.setToolBorder(this.toolFlood);
+        this.game.audio.playSound('click');
         this.togglePaintTools(false);
         this.toggleClipTools(false);
+        this.toggleTextTools(false);
+        this.toggleFloodTools(true);
     }
 
     setToolPaint() {
         this.mode = ActiveToolEnum.PAINT;
+        this.setToolBorder(this.toolPaint);
+        this.game.audio.playSound('click');
         this.togglePaintTools(true);
         this.toggleClipTools(false);
+        this.toggleTextTools(false);
+        this.toggleFloodTools(false);
     }
+
 
    
 
     toggleClipTools(isvisible) {
         this.clipartGroup.visible = isvisible;
         this.game.world.bringToTop(this.clipartGroup);
+     
     }
          
+    toggleTextTools(isvisible) {
+        this.fontGroup.visible = isvisible;
+        this.game.world.bringToTop(this.fontGroup);
+   
+    }
         
     togglePaintTools(isvisible){
         this.brushes.forEach((value, index)=> {
             value.visible = isvisible;
         });
-    }
        
+        
+    }
+    toggleFloodTools(isvisible) {
+    
+    }
     
 
     changeSelectedBrush(brush) {
@@ -211,30 +257,47 @@ class GUI extends Phaser.Sprite {
         }, this);
     }
 
+    setToolBorder(tool) {
+        this.toolBorder.x = tool.x;
+        this.toolBorder.y = tool.y;
+    }
+
+   
     initButtons(callback, context) {
      
         let posY = 420;
         let buffer = 32;
+
+
+        this.toolBorder = this.game.add.image(0, 0, 'tool_border');
+        this.toolBorder.anchor.setTo(0.5);
+        this.toolBorder.scale.setTo(0.75);
+
         //let textBrushes = this.game.add.image(this.width / 2, 450, 'game', 'text_brushes');
-        this.toolPaint = this.game.add.image(this.width / 4 - buffer / 2, posY, 'palette');
+        this.toolPaint = this.game.add.sprite(this.width / 4 - buffer / 2, posY, 'palette');
         this.toolPaint.anchor.setTo(0.5);
         this.toolPaint.scale.setTo(0.75);
+          
+        this.setToolBorder(this.toolPaint);
         
-        this.toolFlood = this.game.add.image(this.width / 2 - buffer, posY,'floodfill');
+        this.toolFlood = this.game.add.sprite(this.width / 2 - buffer, posY,'floodfill');
         this.toolFlood.anchor.setTo(0.5);
         this.toolFlood.scale.setTo(0.75);
       
       
 
-        this.toolClipArt = this.game.add.image(this.width / 2 + buffer, posY,'clipart');
-        this.toolClipArt.anchor.setTo(0.5);
-        this.toolClipArt.scale.setTo(0.75);
+        this.toolClipart = this.game.add.sprite(this.width / 2 + buffer, posY,'clipart');
+        this.toolClipart.anchor.setTo(0.5);
+        this.toolClipart.scale.setTo(0.75);
       
-
-        this.toolText = this.game.add.image(this.width - this.width / 4 + buffer / 2, posY, 'text');
+        this.toolText = this.game.add.sprite(this.width - this.width / 4 + buffer / 2, posY, 'text');
         this.toolText.anchor.setTo(0.5);
       
         this.toolText.scale.setTo(0.75);
+        
+
+        
+
       
         var style = { font: "bold 16px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" };
 
@@ -250,21 +313,22 @@ class GUI extends Phaser.Sprite {
         this.toolFlood.input.useHandCursor = true;
         this.toolFlood.events.onInputUp.add(this.setToolFlood, this);
 
-        this.toolClipArt.inputEnabled = true;
-        this.toolClipArt.input.useHandCursor = true;
-        this.toolClipArt.events.onInputUp.add(this.setToolClipArt, this);
+        this.toolClipart.inputEnabled = true;
+        this.toolClipart.input.useHandCursor = true;
+        this.toolClipart.events.onInputUp.add(this.setToolClipart, this);
 
         this.toolText.inputEnabled = true;
         this.toolText.input.useHandCursor = true;
-        this.toolText.events.onInputUp.add(context.createText, context);
+        this.toolText.events.onInputUp.add(this.setToolText, this);
 
 
         this.addChild(this.toolPaint);
         this.addChild(this.toolFlood);
-        this.addChild(this.toolClipArt);
+        this.addChild(this.toolClipart);
         this.addChild(this.toolText);
-
+        this.addChild(this.toolBorder);
       
+        this.toolClipart.visible = !this.game.noclips;
 
         let offsetY = 650;
 
@@ -285,13 +349,13 @@ class GUI extends Phaser.Sprite {
         this.addChild(quit);
     } 
 
-    initClipArt(context) {
+    initClipart(context) {
     
         let categories = this.game.cache.getJSON('settings').clipartCategories;
         let offsetX = this.width / 2 + 5, offsetY = 550;
 
         this.clipartGroup = this.game.add.group();
-        this.clipartTool = new ClipartCategoryTool(this.game, offsetX, offsetY, categories, context.openClipArtSelector, context);
+        this.clipartTool = new ClipartCategoryTool(this.game, offsetX, offsetY, categories, context.openClipartSelector, context);
         this.clipartGroup.addChild(this.clipartTool);
         this.clipartGroup.visible = false;
         this.addChild(this.clipartGroup);

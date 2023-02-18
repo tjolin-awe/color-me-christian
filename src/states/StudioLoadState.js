@@ -7,7 +7,7 @@ class StudioLoadState {
         // show logo and progress bar
         this.preloadLogo = this.game.add.image(this.game.world.width / 2, this.game.world.height / 2 - 100, 'logo');
         this.preloadLogo.anchor.setTo(0.5);
-        
+        this.game.noclips = false;
         this.preloadBar = this.game.add.sprite(this.game.world.width / 2, this.game.world.height / 2 + 100, 'progress');
         this.preloadBar.x -= this.preloadBar.width / 2;
         this.game.load.setPreloadSprite(this.preloadBar);

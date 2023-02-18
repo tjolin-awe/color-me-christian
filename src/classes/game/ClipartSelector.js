@@ -27,6 +27,7 @@ class ClipartSelector extends Phaser.Sprite {
             
             this.hide();
             this.game.art_sprites.visible = true;
+            this.game.audio.playSound('click');
           
         }, this, 'button_menu_on', 'button_menu_off');
         this.button_menu.anchor.setTo(0.5);
@@ -131,6 +132,7 @@ class ClipartSelector extends Phaser.Sprite {
             let pic = this.game.add.image(bg.width / 2, bg.height / 2, this.clips[i].texture, this.clips[i].frame);
             pic.anchor.setTo(0.5);
             pic.scale.setTo(0.50);
+            pic.name = this.clips[i].frame;
             bg.addChild(pic);
             
             bg.addChild(this.game.add.image(0, 0, 'mainMenu', 'picture_border'));
@@ -138,7 +140,7 @@ class ClipartSelector extends Phaser.Sprite {
             bg.lazyload_frame = this.clips[i].index;
             bg.inputEnabled = true;
             bg.input.useHandCursor = true;
-            bg.events.onInputDown.add(this.context.selectClipArt, this.context);
+            bg.events.onInputDown.add(this.context.selectClipart, this.context);
 
             this.clipGroup.addChild(bg);
     
@@ -156,6 +158,7 @@ slide(direction) {
     if (this.sliding) 
         return;
     
+    this.game.audio.playSound('click');
     var height = direction === 'up' ? -600 : 600;
 
 

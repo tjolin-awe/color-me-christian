@@ -1,5 +1,4 @@
-{
-  "display_override": [
+{ "display_override": [
     "window-controls-overlay" 
   ],
   "protocol_handlers": [

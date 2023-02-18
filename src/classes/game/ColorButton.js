@@ -37,6 +37,7 @@ class ColorButton extends Phaser.Sprite {
                 console.log('changing color');
                 let newcolor = `#${this.color.substring(2)}`;
                 this.game.boundingBox.clipart.addColor(newcolor,0);
+                this.game.boundingBox.clipart.currentColor = newcolor;
             }
 
         }

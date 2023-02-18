@@ -2,6 +2,135 @@
     "pictures": 26,
     "preserveLines": true,
     "adMobInterstitialId": "",
+    "fonts":[
+    {
+        "name": "Brush Script",
+        "filename": "",
+        "family": "Brush Script MT, cursive",
+        "fontWeight" : "normal",
+        "size": "48pt"
+    },
+    {
+        "name": "roboto",
+        "filename": "roboto-webfont",
+        "family" : "roboto",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "Arial",
+        "filename": "",
+        "family" : "Arial, Helvetica Neue, Helvetica, sans-serif",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "Arial Black",
+        "filename": "",
+        "family" : "Arial Black, Arial Bold, Gadget, sans-serif",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "Impact",
+        "filename": "Arial Black, Arial Bold, Gadget, sans-serif",
+        "family" : "Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "BlackOpsOne",
+        "filename": "BlackOpsOne-Regular",
+        "family" : "BlackOpsOne-Regular",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "BioRhyme Bold",
+        "filename": "BioRhyme-Bold",
+        "family" : "BioRhyme-Bold",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "BioRhyme Extra Bold",
+        "filename": "BioRhyme-ExtraBold",
+        "family" : "BioRhyme-ExtraBold",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "BioRhyme Light",
+        "filename": "BioRhyme-Light",
+        "family" : "BioRhyme-Light",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "BioRhyme",
+        "filename": "BioRhyme-Regular",
+        "family" : "BioRhyme-Regular",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "BioRhyme Extra Light",
+        "filename": "BioRhyme-ExtraLight",
+        "family" : "BioRhyme-ExtraLight",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "Creepster",
+        "filename": "Creepster-Regular",
+        "family" : "Creepster-Regular",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "Fruktur",
+        "filename": "Fruktur-Italic",
+        "family" : "Fruktur-Italic",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "GravitasOne",
+        "filename": "GravitasOne-Regular",
+        "family" : "GravitasOne-Regular",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "Rubik",
+        "filename": "Rubik-VariableFont_wght",
+        "family" : "Rubik-VariableFont_wght",
+        "fontWeight": "normal",
+        "size": "48pt"
+     
+    },
+    {
+        "name": "Ewert",
+        "filename": "Ewert-Regular",
+        "family" : "Ewert-Regular",
+        "fontWeight": "normal",
+        "size": "48pt"
+
+     
+    }],
     "clipartCategories": [
         {
             "key": "characters",
