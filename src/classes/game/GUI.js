@@ -7,7 +7,8 @@ const { FontTool} = require('./FontTool');
 const ActiveToolEnum = {
     PAINT: 1,
     FLOOD: 2,
-    CLIPART: 3
+    CLIPART: 3,
+    TEXT: 4
    };
 Object.freeze(ActiveToolEnum);
 
@@ -21,10 +22,13 @@ class GUI extends Phaser.Sprite {
         this.initColors();
         this.initButtons(callback, context)
 
+        this.clipartGroup = this.game.add.group();
+        this.clipartGroup.visible = false;
         if (!this.game.noclips)
             this.initClipart(context);
         this.initFonts(context);
         this.mode = ActiveToolEnum.PAINT;
+        
     }
 
   
@@ -166,58 +170,34 @@ class GUI extends Phaser.Sprite {
 
     this.game.clips.show(key);
     //this.toggleClipTools(true);
-    }
-    
-    setToolClipart() {
-        this.mode = ActiveToolEnum.CLIPART;
-        this.setToolBorder(this.toolClipart);
-        this.game.audio.playSound('click');
-        this.togglePaintTools(false);
-        this.toggleTextTools(false);
-        this.toggleClipTools(true);
-        this.toggleFloodTools(false);
 
-        return;
+    }
+
+    setTool(id, click) {
+
+        if (click)
+            this.game.audio.playSound('click');
+
        
+        const tool = this.tools[id];
+
+        for (const [key, value] of Object.entries(this.tools)) {
+            console.log(key, value);
+            value.selectedcallback.call(this, false);
+        }
+
+        this.setToolBorder(id);
+        tool.selectedcallback.call(this, true);
+        this.mode = id;
     }
             
-    setToolText() {
-        this.mode = ActiveToolEnum.TEXT;
-        this.setToolBorder(this.toolText);
-        this.game.audio.playSound('click');
-        this.toggleClipTools(false);
-        this.togglePaintTools(false);
-        this.toggleTextTools(true);
-        this.toggleFloodTools(false);
+    onToolButtonClicked(tool) {
+        this.setTool(tool.id, true);
     }
-
-    setToolFlood() {
-        this.mode = ActiveToolEnum.FLOOD;
-        this.setToolBorder(this.toolFlood);
-        this.game.audio.playSound('click');
-        this.togglePaintTools(false);
-        this.toggleClipTools(false);
-        this.toggleTextTools(false);
-        this.toggleFloodTools(true);
-    }
-
-    setToolPaint() {
-        this.mode = ActiveToolEnum.PAINT;
-        this.setToolBorder(this.toolPaint);
-        this.game.audio.playSound('click');
-        this.togglePaintTools(true);
-        this.toggleClipTools(false);
-        this.toggleTextTools(false);
-        this.toggleFloodTools(false);
-    }
-
-
-   
 
     toggleClipTools(isvisible) {
         this.clipartGroup.visible = isvisible;
         this.game.world.bringToTop(this.clipartGroup);
-     
     }
          
     toggleTextTools(isvisible) {
@@ -257,9 +237,26 @@ class GUI extends Phaser.Sprite {
         }, this);
     }
 
-    setToolBorder(tool) {
-        this.toolBorder.x = tool.x;
-        this.toolBorder.y = tool.y;
+    setToolBorder(id) {
+
+        this.toolBorder.x =  this.tools[id].x;
+        this.toolBorder.y =  this.tools[id].y;
+    }
+
+
+    createTool(id, icon, x, y, callback) {
+        const tool = this.game.add.sprite(x, y, icon);
+        tool.anchor.setTo(0.5);
+        tool.scale.setTo(0.75);
+        tool.inputEnabled = true;
+        tool.selectedcallback = callback;
+        tool.input.useHandCursor = true;
+        tool.id = id;
+        tool.events.onInputUp.add(this.onToolButtonClicked, this);
+        this.tools[id] = tool;
+
+        console.log(tool);
+        return tool;
     }
 
    
@@ -268,83 +265,39 @@ class GUI extends Phaser.Sprite {
         let posY = 420;
         let buffer = 32;
 
-
+        this.tools = {};
+       
+        this.addChild(this.createTool(ActiveToolEnum.PAINT, 'palette',this.width / 4 - buffer, posY, this.togglePaintTools));
+        this.addChild(this.createTool(ActiveToolEnum.FLOOD, 'floodfill',this.width / 2 - buffer, posY, this.toggleFloodTools));
+        this.addChild(this.createTool(ActiveToolEnum.TEXT,'text', this.width / 2 + buffer + 8, posY, this.toggleTextTools));
+        this.addChild(this.createTool(ActiveToolEnum.CLIPART,'clipart',this.width - this.width / 4 + buffer - 8, posY, this.toggleClipTools));
+     
         this.toolBorder = this.game.add.image(0, 0, 'tool_border');
         this.toolBorder.anchor.setTo(0.5);
         this.toolBorder.scale.setTo(0.75);
-
-        //let textBrushes = this.game.add.image(this.width / 2, 450, 'game', 'text_brushes');
-        this.toolPaint = this.game.add.sprite(this.width / 4 - buffer / 2, posY, 'palette');
-        this.toolPaint.anchor.setTo(0.5);
-        this.toolPaint.scale.setTo(0.75);
-          
-        this.setToolBorder(this.toolPaint);
-        
-        this.toolFlood = this.game.add.sprite(this.width / 2 - buffer, posY,'floodfill');
-        this.toolFlood.anchor.setTo(0.5);
-        this.toolFlood.scale.setTo(0.75);
-      
-      
-
-        this.toolClipart = this.game.add.sprite(this.width / 2 + buffer, posY,'clipart');
-        this.toolClipart.anchor.setTo(0.5);
-        this.toolClipart.scale.setTo(0.75);
-      
-        this.toolText = this.game.add.sprite(this.width - this.width / 4 + buffer / 2, posY, 'text');
-        this.toolText.anchor.setTo(0.5);
-      
-        this.toolText.scale.setTo(0.75);
-        
-
-        
-
-      
-        var style = { font: "bold 16px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" };
-
-        //  The Text is positioned at 0, 100
-        //this.toolText = this.game.add.text(this.width /3, 460, "Paint", style);
-        //this.toolText.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
-
-        this.toolPaint.inputEnabled = true;
-        this.toolPaint.input.useHandCursor = true;
-        this.toolPaint.events.onInputUp.add(this.setToolPaint, this);
-
-        this.toolFlood.inputEnabled = true;
-        this.toolFlood.input.useHandCursor = true;
-        this.toolFlood.events.onInputUp.add(this.setToolFlood, this);
-
-        this.toolClipart.inputEnabled = true;
-        this.toolClipart.input.useHandCursor = true;
-        this.toolClipart.events.onInputUp.add(this.setToolClipart, this);
-
-        this.toolText.inputEnabled = true;
-        this.toolText.input.useHandCursor = true;
-        this.toolText.events.onInputUp.add(this.setToolText, this);
-
-
-        this.addChild(this.toolPaint);
-        this.addChild(this.toolFlood);
-        this.addChild(this.toolClipart);
-        this.addChild(this.toolText);
         this.addChild(this.toolBorder);
+
+        this.setToolBorder(ActiveToolEnum.PAINT);
       
-        this.toolClipart.visible = !this.game.noclips;
+        this.tools[ActiveToolEnum.CLIPART].visible = !this.game.noclips;
 
         let offsetY = 650;
 
 
-        if (!window.cordova){
-            let save = this.game.add.button(40, offsetY, 'game', callback, context, 'button_save_on', 'button_save_off');
-            this.addChild(save);
-        }
+      
+        let save = this.game.add.button(40, offsetY, 'game', callback, context, 'button_save_on', 'button_save_off');
+        
+        this.addChild(save);
 
         let clear = this.game.add.button(130, offsetY, 'game', function(){
             this.game.state.start('GameState');
+            this.game.audio.playSound('dustbin');
         }, this, 'button_clear_on', 'button_clear_off');
         this.addChild(clear);
 
         let quit = this.game.add.button(220, offsetY, 'game', function(){
             this.game.state.start('MainMenuState');
+            this.game.audio.playSound('click');
         }, this, 'button_quit_on', 'button_quit_off');
         this.addChild(quit);
     } 
@@ -354,10 +307,8 @@ class GUI extends Phaser.Sprite {
         let categories = this.game.cache.getJSON('settings').clipartCategories;
         let offsetX = this.width / 2 + 5, offsetY = 550;
 
-        this.clipartGroup = this.game.add.group();
         this.clipartTool = new ClipartCategoryTool(this.game, offsetX, offsetY, categories, context.openClipartSelector, context);
         this.clipartGroup.addChild(this.clipartTool);
-        this.clipartGroup.visible = false;
         this.addChild(this.clipartGroup);
 
 

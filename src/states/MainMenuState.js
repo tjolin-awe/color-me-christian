@@ -33,6 +33,7 @@ class MainMenuState {
             let pictures = this.game.cache.getJSON('settings').pictures;
             this.game.currentPicture = null;
             this.game.audio.playSound('click');
+            console.log('played from MainMenuState');
             this.game.state.start('StudioLoadState');
             
         }, this, 'button_studio_on', 'button_studio_off');

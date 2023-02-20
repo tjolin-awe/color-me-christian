@@ -37,7 +37,7 @@ class GameState {
 
     create() {
 
- 
+        this.game.audio.addSound('dustbin');
 
         this.game.undoManager = new UndoManager(this.game, this, 10);
 
@@ -99,6 +99,7 @@ class GameState {
 
     saveImage() {
 
+        this.game.audio.playSound('click');
         this.game.art_sprites.sort('z', Phaser.Group.SORT_ASCENDING);
 
         this.game.art_sprites.children.forEach((sprite)=> {
@@ -126,8 +127,6 @@ class GameState {
     createText() {
 
 
-       
-        this.game.gui.setToolText();
         let style = { font: this.game.gui.fontTool.getCurrentFont(), fill: `#${this.game.gui.color.substring(2)}`, boundsAlignH: "center", boundsAlignV: "middle" };
         
         console.log(style);
@@ -136,6 +135,7 @@ class GameState {
         this.game.boundingBox.captureClipart(text);
         this.game.art_sprites.visible = true;
         this.game.art_sprites.addChild(text);
+        this.game.audio.playSound('click');
 
     }
     paint(pointer, x, y) {
@@ -165,6 +165,7 @@ class GameState {
 
     selectClipart(clipart, pointer) {
        
+        this.game.audio.playSound('click');
         let clone = new Clipart(this.game, this.game.bmdContainer.width / 2 , this.game.bmdContainer.height / 2, clipart.lazyload_texture, clipart.lazyload_frame, pointer, this);
         clone.name = clipart.name;
         this.game.boundingBox.captureClipart(clone);
@@ -291,6 +292,7 @@ class GameState {
             object.kill();
             object = null;
     
+            this.game.audio.playSound('dustbin');
             console.log(`Destroyed { ${id}, ${type}}`);
             
         }

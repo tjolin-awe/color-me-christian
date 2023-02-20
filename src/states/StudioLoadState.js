@@ -4,6 +4,10 @@ class StudioLoadState {
     }
 
     preload() {
+
+        
+        this.game.stage.backgroundColor = "#000";
+
         // show logo and progress bar
         this.preloadLogo = this.game.add.image(this.game.world.width / 2, this.game.world.height / 2 - 100, 'logo');
         this.preloadLogo.anchor.setTo(0.5);
@@ -27,6 +31,7 @@ class StudioLoadState {
             }
         });
 
+        this.game.audio.loadAudio('dustbin','dustbin');
      
     }
 

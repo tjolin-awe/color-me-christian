@@ -1,5 +1,6 @@
 const {BoxHandleEnum, BoxSquare} = require('../game/BoxSquare');
 const {GameText} = require('./GameText');
+const { ActiveToolEnum } = require('./GUI');
 
 const HANDLE_BUFFER = 10;
 
@@ -53,6 +54,10 @@ class BoundingBox {
 
     hide() {
         this.handles.visible = false;
+    }
+
+    show() {
+        this.handles.visible = true;
     }
 
     createHandle(position) {
@@ -136,16 +141,16 @@ class BoundingBox {
             this.setRatioLock(true);  // Lock ratio for text by default
             this.buttonLock.visible = false;
             this.game.gui.fontTool.setCurrentFont(this.clipart.fontIndex);
-            this.game.gui.setToolText();
+            this.game.gui.setTool(ActiveToolEnum.TEXT, false);
         } 
         else 
         {
             this.buttonLock.visible = true;
             this.setRatioLock(this.clipart.preserveRatio);
-            this.game.gui.setToolClipart();
+            this.game.gui.setTool(ActiveToolEnum.CLIPART, false);
         }
 
-        this.hide();
+        this.show();
         
         this.resetButtonTextures();
         this.updatePositions();

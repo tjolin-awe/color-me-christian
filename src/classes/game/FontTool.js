@@ -64,6 +64,7 @@ class FontTool extends Phaser.Sprite {
         this.index++;
         this.index = this.index % this.fontLength    
         this.updateFont();
+        this.game.audio.playSound('click');
     }
     previous(){
         this.index--;
@@ -73,6 +74,7 @@ class FontTool extends Phaser.Sprite {
 
         this.index = this.index % this.fontLength;
         this.updateFont();
+        this.game.audio.playSound('click');
     }
 
     getCurrentFont(){

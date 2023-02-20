@@ -20,22 +20,16 @@ class ClipartCategoryTool extends Phaser.Sprite {
         border.anchor.setTo(0.5);
         this.addChild(border);
 
-        this.btnNext = thi,s.game.add.button(120, 0, 'mainMenu', , this, 'button_up_on', 'button_up_off');
-
-        
+        this.btnNext = this.game.add.button(120, 0, 'mainMenu', this.next, this, 'button_up_on', 'button_up_off');
         this.btnNext.anchor.setTo(0.5);
         this.btnNext.angle = 90;
-        this.btnNext.events.onInputUp.add(this.next, this);
-
+        
         this.addChild(this.btnNext);
        
-        this.btnPrevious = this.game.add.button(-120, 0, 'mainMenu', function(){
-        }, this, 'button_up_on', 'button_up_off');
-        
+        this.btnPrevious = this.game.add.button(-120, 0, 'mainMenu', this.previous, this, 'button_up_on', 'button_up_off');   
         this.btnPrevious.anchor.setTo(0.5);
         this.btnPrevious.angle = 270;
-        this.btnPrevious.events.onInputUp.add(this.previous, this);
-
+  
         this.addChild(this.btnPrevious);
     }
 
@@ -44,6 +38,7 @@ class ClipartCategoryTool extends Phaser.Sprite {
         this.index++;
         this.index = this.index % this.categories.length    
         this.loadCategoryIcon();
+        this.game.audio.playSound('click');
     }
 
 
@@ -56,6 +51,7 @@ class ClipartCategoryTool extends Phaser.Sprite {
 
         this.index = this.index % this.categories.length;
         this.loadCategoryIcon();
+        this.game.audio.playSound('click');
     }
 
     loadCategoryIcon() {
