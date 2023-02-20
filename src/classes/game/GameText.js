@@ -1,4 +1,8 @@
-const KEYS = ['!','?','.','$','#',' ','@','%','*',"'",'[',']','(',')','-','=',"'",";","'",'"'];
+const KEYS = {"!":"!","?":"?",".":".","$":"$","#":"#",
+              " ":" ","@":"@","%":"%","*":"*","[":"[",
+              "]":"]","(":"(",")":")","-":"-","=":"=",
+              "'":"'",";":";",'"':'"'};
+
 
 class GameText extends Phaser.Text {
     constructor(game, x, y, text, style, context) {
@@ -39,16 +43,12 @@ class GameText extends Phaser.Text {
 
         const char = data.keyCode;
         const key = data.key;
-
-        console.log(key);
-        console.log(char);
         if (this.initialInput) {
             this.initialInput = false;
             this.setText('');
         }
 
-        if ((char >= 48 && char <= 57) || (char >= 65 && char <= 90) || char == 188 || char == 32 || key in KEYS) {   
-            console.log('acceptedkey');
+        if ((char >= 48 && char <= 57) || (char >= 65 && char <= 90) || char == 188 || char == 32 || key.toString() in KEYS) {   
             this.setText(this.text += data.key);
         }
 

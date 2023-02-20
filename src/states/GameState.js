@@ -91,7 +91,14 @@ class GameState {
         //if (this.game.cache.getJSON('settings').preserveLines) 
          //   this.game.add.image(0, 0, this.key);
 
+
+        this.game.input.keyboard.addKeyCapture(Phaser.Keyboard.QUESTION_MARK);
+        this.game.input.keyboard.addKeyCapture(Phaser.Keyboard.PERIOD);
+        this.game.input.keyboard.addKeyCapture(Phaser.Keyboard.QUOTES);
+        this.game.input.keyboard.addKeyCapture(Phaser.Keyboard.SPACEBAR);
         this.game.input.keyboard.addCallbacks(this, null, this.keyPress, null);
+        console.log('keyboard object');
+        console.log(this.game.input.keyboard);
 
         // this.game.input.keyboard.on('keydown', this.keyPress);
        
@@ -249,7 +256,7 @@ class GameState {
 
     }
     keyPress(data) {
-       
+     
         console.log(data);
         if (data.keyCode == 27) {
 
