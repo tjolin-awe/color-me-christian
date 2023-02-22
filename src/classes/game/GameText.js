@@ -48,12 +48,13 @@ class GameText extends Phaser.Text {
             this.setText('');
         }
 
-        if ((char >= 48 && char <= 57) || (char >= 65 && char <= 90) || char == 188 || char == 32 || key.toString() in KEYS) {   
-            this.setText(this.text += data.key);
+        if ((char >= 48 && char <= 57) || (char >= 65 && char <= 90) || key.toString() in KEYS) {   
+            this.setText(this.text + data.key);
         }
-
         else if(char == 8) 
             this.setText(this.text.substring(0, this.text.length - 1));  // Backspace
+        else if(char == 13)
+            this.setText(this.text + '\n');
 
         this.game.boundingBox.updatePositions();
     }

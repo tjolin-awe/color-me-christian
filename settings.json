@@ -36,7 +36,7 @@
     },
     {
         "name": "Impact",
-        "filename": "Arial Black, Arial Bold, Gadget, sans-serif",
+        "filename": "",
         "family" : "Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif",
         "fontWeight": "normal",
         "size": "48pt"

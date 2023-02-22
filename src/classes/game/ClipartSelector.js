@@ -119,6 +119,7 @@ class ClipartSelector extends Phaser.Sprite {
         this.clipGroup.removeAll();
         this.clipGroup.y = 0;
       
+        let style = {font: 'Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif', fontSize: '16pt', fill: '#000' };
 
         for (let i = 0; i < this.clips.length; i++) {
            
@@ -126,8 +127,6 @@ class ClipartSelector extends Phaser.Sprite {
             let xx = offsetX + (i % 4) * width;
             let yy = offsetY + Math.floor(i / 4) * height;
             let bg = this.game.add.image(xx, yy, 'mainMenu', 'picture_bg');
-        
-
             
             let pic = this.game.add.image(bg.width / 2, bg.height / 2, this.clips[i].texture, this.clips[i].frame);
             pic.anchor.setTo(0.5);
@@ -141,6 +140,10 @@ class ClipartSelector extends Phaser.Sprite {
             bg.inputEnabled = true;
             bg.input.useHandCursor = true;
             bg.events.onInputDown.add(this.context.selectClipart, this.context);
+
+            let label = this.game.add.text(17,10, this.clips[i].frame, style);
+            bg.addChild(label);
+
 
             this.clipGroup.addChild(bg);
     
