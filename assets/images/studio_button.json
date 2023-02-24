@@ -1,0 +1,165 @@
+{
+  "frames": [
+    {
+      "filename": "button_studio_choose_off",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 461,
+        "h": 148
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 461,
+        "h": 148
+      },
+      "sourceSize": {
+        "w": 461,
+        "h": 148
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "button_studio_choose_on",
+      "frame": {
+        "x": 461,
+        "y": 0,
+        "w": 461,
+        "h": 148
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 461,
+        "h": 148
+      },
+      "sourceSize": {
+        "w": 461,
+        "h": 148
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "button_studio_off",
+      "frame": {
+        "x": 922,
+        "y": 0,
+        "w": 461,
+        "h": 148
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 461,
+        "h": 148
+      },
+      "sourceSize": {
+        "w": 461,
+        "h": 148
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "button_studio_on",
+      "frame": {
+        "x": 1383,
+        "y": 0,
+        "w": 461,
+        "h": 148
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 461,
+        "h": 148
+      },
+      "sourceSize": {
+        "w": 461,
+        "h": 148
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "button_studio_random_off",
+      "frame": {
+        "x": 0,
+        "y": 148,
+        "w": 461,
+        "h": 148
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 461,
+        "h": 148
+      },
+      "sourceSize": {
+        "w": 461,
+        "h": 148
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "button_studio_random_on",
+      "frame": {
+        "x": 461,
+        "y": 148,
+        "w": 461,
+        "h": 148
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 461,
+        "h": 148
+      },
+      "sourceSize": {
+        "w": 461,
+        "h": 148
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "studio_button.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1844,
+      "h": 296
+    },
+    "scale": 1
+  }
+}

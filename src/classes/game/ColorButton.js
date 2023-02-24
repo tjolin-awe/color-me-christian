@@ -1,9 +1,10 @@
 const {GameText} = require('./GameText');
 
 class ColorButton extends Phaser.Sprite {
-    constructor(game, x, y, color, callback, context) {
+    constructor(game, index, x, y, color, callback, context) {
         super(game, x, y, 'game', 'color_bg');
         this.color = color;
+        this.index = index;
         this.anchor.setTo(0.5);
         this.game.add.existing(this);
 
@@ -22,6 +23,11 @@ class ColorButton extends Phaser.Sprite {
 
   
         this.addChild(this.colorSprite);
+    }
+
+    updateColor(color) {
+        this.color = color;
+        this.colorSprite.tint = this.color;
     }
 
     turnOn() {

@@ -1,7 +1,7 @@
 {
   "frames": [
     {
-      "filename": "Thirty Silver Pieces Colour",
+      "filename": "Thirty Silver Pieces",
       "frame": {
         "x": 0,
         "y": 0,
@@ -301,7 +301,7 @@
       }
     },
     {
-      "filename": "Victor's Crown Colour",
+      "filename": "Victor's Crown",
       "frame": {
         "x": 1280,
         "y": 0,
@@ -351,7 +351,7 @@
       }
     },
     {
-      "filename": "alabaster flask of fragrant oil",
+      "filename": "Alabaster Flask of\nFragrant Oil",
       "frame": {
         "x": 1792,
         "y": 0,

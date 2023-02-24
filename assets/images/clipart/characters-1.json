@@ -51,7 +51,7 @@
       }
     },
     {
-      "filename": "Jesus Scripture Reading",
+      "filename": "Jesus Reading",
       "frame": {
         "x": 0,
         "y": 512,
@@ -151,7 +151,7 @@
       }
     },
     {
-      "filename": "Jesus Teaching Colour",
+      "filename": "Jesus Teaching",
       "frame": {
         "x": 0,
         "y": 1536,
@@ -201,7 +201,7 @@
       }
     },
     {
-      "filename": "Jesus Walk On Water",
+      "filename": "Jesus Walks on Water",
       "frame": {
         "x": 256,
         "y": 0,
@@ -226,7 +226,7 @@
       }
     },
     {
-      "filename": "Jesus Washing Colour",
+      "filename": "Jesus Washing",
       "frame": {
         "x": 512,
         "y": 0,
@@ -276,7 +276,7 @@
       }
     },
     {
-      "filename": "Jesus Young Colour",
+      "filename": "Jesus Young",
       "frame": {
         "x": 1024,
         "y": 0,
@@ -301,7 +301,7 @@
       }
     },
     {
-      "filename": "Jesus on Cross Colour",
+      "filename": "Jesus on the Cross",
       "frame": {
         "x": 1280,
         "y": 0,
@@ -326,7 +326,7 @@
       }
     },
     {
-      "filename": "Jesus on Donkey Colour",
+      "filename": "Jesus on a Donkey",
       "frame": {
         "x": 1536,
         "y": 0,
@@ -351,7 +351,7 @@
       }
     },
     {
-      "filename": "Jesus on White Horse Colour",
+      "filename": "Jesus on a White Horse",
       "frame": {
         "x": 1792,
         "y": 0,
@@ -376,7 +376,7 @@
       }
     },
     {
-      "filename": "Jezebel Colour",
+      "filename": "Jezebel",
       "frame": {
         "x": 256,
         "y": 256,
@@ -401,7 +401,7 @@
       }
     },
     {
-      "filename": "Joab Colour",
+      "filename": "Joab",
       "frame": {
         "x": 256,
         "y": 512,
@@ -426,7 +426,7 @@
       }
     },
     {
-      "filename": "Job Colour",
+      "filename": "Job",
       "frame": {
         "x": 256,
         "y": 768,
@@ -451,7 +451,7 @@
       }
     },
     {
-      "filename": "Job Sick Colour",
+      "filename": "Job Sick",
       "frame": {
         "x": 256,
         "y": 1024,
@@ -476,7 +476,7 @@
       }
     },
     {
-      "filename": "Job's Wife Colour",
+      "filename": "Job's Wife",
       "frame": {
         "x": 256,
         "y": 1280,
@@ -526,7 +526,7 @@
       }
     },
     {
-      "filename": "Jonah Colour",
+      "filename": "Jonah",
       "frame": {
         "x": 256,
         "y": 1792,
@@ -551,7 +551,7 @@
       }
     },
     {
-      "filename": "Jonah Fish Colour",
+      "filename": "Jonah in the Fish",
       "frame": {
         "x": 512,
         "y": 256,
@@ -576,7 +576,7 @@
       }
     },
     {
-      "filename": "Jonah and Fish Colour",
+      "filename": "Jonah and the Fish",
       "frame": {
         "x": 768,
         "y": 256,
@@ -601,7 +601,7 @@
       }
     },
     {
-      "filename": "Jonathan Colour",
+      "filename": "Jonathan",
       "frame": {
         "x": 1024,
         "y": 256,
@@ -626,7 +626,7 @@
       }
     },
     {
-      "filename": "Joseph Mary Colour",
+      "filename": "Joseph & Mary",
       "frame": {
         "x": 1280,
         "y": 256,
@@ -651,7 +651,7 @@
       }
     },
     {
-      "filename": "Joseph PM",
+      "filename": "Joseph Prime Minister",
       "frame": {
         "x": 1536,
         "y": 256,
@@ -726,7 +726,7 @@
       }
     },
     {
-      "filename": "Judas Colour",
+      "filename": "Judas",
       "frame": {
         "x": 512,
         "y": 768,
@@ -751,7 +751,7 @@
       }
     },
     {
-      "filename": "King Jehoshaphat Colour",
+      "filename": "King Jehoshaphat",
       "frame": {
         "x": 512,
         "y": 1024,
@@ -776,7 +776,7 @@
       }
     },
     {
-      "filename": "Lazarus Colour",
+      "filename": "Lazarus",
       "frame": {
         "x": 512,
         "y": 1280,
@@ -801,7 +801,7 @@
       }
     },
     {
-      "filename": "Lazarus risen Colour",
+      "filename": "Lazarus Risen",
       "frame": {
         "x": 512,
         "y": 1536,
@@ -826,7 +826,7 @@
       }
     },
     {
-      "filename": "LazarusPoor",
+      "filename": "Lazarus the Poor Man",
       "frame": {
         "x": 512,
         "y": 1792,
@@ -851,7 +851,7 @@
       }
     },
     {
-      "filename": "Martha Colour",
+      "filename": "Martha",
       "frame": {
         "x": 768,
         "y": 512,
@@ -876,7 +876,7 @@
       }
     },
     {
-      "filename": "Mary Colour",
+      "filename": "Mary",
       "frame": {
         "x": 1024,
         "y": 512,
@@ -901,7 +901,7 @@
       }
     },
     {
-      "filename": "Mary Jesus Colour",
+      "filename": "Mary & Jesus",
       "frame": {
         "x": 1280,
         "y": 512,
@@ -926,7 +926,7 @@
       }
     },
     {
-      "filename": "Mary Joseph Donkey",
+      "filename": "Mary & Joseph on Donkey",
       "frame": {
         "x": 1536,
         "y": 512,
@@ -951,7 +951,7 @@
       }
     },
     {
-      "filename": "Mary Magdalene Colour",
+      "filename": "Mary Magdalene",
       "frame": {
         "x": 1792,
         "y": 512,
@@ -976,7 +976,7 @@
       }
     },
     {
-      "filename": "Mary Martha sister Colour",
+      "filename": "Mary & Martha",
       "frame": {
         "x": 768,
         "y": 768,
@@ -1001,7 +1001,7 @@
       }
     },
     {
-      "filename": "Mary Mother Colour",
+      "filename": "Mary Mother",
       "frame": {
         "x": 768,
         "y": 1024,
@@ -1026,7 +1026,7 @@
       }
     },
     {
-      "filename": "Mary Old Colour",
+      "filename": "Mary Older",
       "frame": {
         "x": 768,
         "y": 1280,
@@ -1051,7 +1051,7 @@
       }
     },
     {
-      "filename": "Mary and Donkey",
+      "filename": "Mary & Donkey",
       "frame": {
         "x": 768,
         "y": 1536,
@@ -1076,7 +1076,7 @@
       }
     },
     {
-      "filename": "Mephibosheth Colour",
+      "filename": "Mephibosheth",
       "frame": {
         "x": 768,
         "y": 1792,
@@ -1101,7 +1101,7 @@
       }
     },
     {
-      "filename": "Mini Jesus Colour",
+      "filename": "Mini Jesus",
       "frame": {
         "x": 1024,
         "y": 768,
@@ -1201,7 +1201,7 @@
       }
     },
     {
-      "filename": "Mordecai Colour",
+      "filename": "Mordecai",
       "frame": {
         "x": 1024,
         "y": 1024,
@@ -1251,7 +1251,7 @@
       }
     },
     {
-      "filename": "Moses Eygpt",
+      "filename": "Moses in Eygpt",
       "frame": {
         "x": 1024,
         "y": 1536,
@@ -1301,7 +1301,7 @@
       }
     },
     {
-      "filename": "Nabal Colour",
+      "filename": "Nabal",
       "frame": {
         "x": 1280,
         "y": 1024,
@@ -1326,7 +1326,7 @@
       }
     },
     {
-      "filename": "Nathan Colour",
+      "filename": "Nathan",
       "frame": {
         "x": 1536,
         "y": 1024,
@@ -1376,7 +1376,7 @@
       }
     },
     {
-      "filename": "Noah & Wife Colour",
+      "filename": "Noah & Wife",
       "frame": {
         "x": 1280,
         "y": 1280,
@@ -1401,7 +1401,7 @@
       }
     },
     {
-      "filename": "Noah Colour",
+      "filename": "Noah",
       "frame": {
         "x": 1280,
         "y": 1536,
@@ -1476,7 +1476,7 @@
       }
     },
     {
-      "filename": "Peter Colour",
+      "filename": "Peter",
       "frame": {
         "x": 1792,
         "y": 1280,
@@ -1501,7 +1501,7 @@
       }
     },
     {
-      "filename": "Pharisee Colour",
+      "filename": "Pharisee",
       "frame": {
         "x": 1536,
         "y": 1536,
@@ -1551,7 +1551,7 @@
       }
     },
     {
-      "filename": "Pilate Colour",
+      "filename": "Pilate",
       "frame": {
         "x": 1792,
         "y": 1536,
@@ -1576,7 +1576,7 @@
       }
     },
     {
-      "filename": "Priest Uzzah Colour",
+      "filename": "Priest Uzzah",
       "frame": {
         "x": 1792,
         "y": 1792,

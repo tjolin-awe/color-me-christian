@@ -1,7 +1,7 @@
 {
   "frames": [
     {
-      "filename": "Bear Colour",
+      "filename": "Bear",
       "frame": {
         "x": 0,
         "y": 0,
@@ -26,7 +26,7 @@
       }
     },
     {
-      "filename": "Bear",
+      "filename": "Bear 2",
       "frame": {
         "x": 0,
         "y": 256,
@@ -76,7 +76,7 @@
       }
     },
     {
-      "filename": "Boar Colour",
+      "filename": "Boar",
       "frame": {
         "x": 0,
         "y": 768,
@@ -101,7 +101,7 @@
       }
     },
     {
-      "filename": "Camel Colour",
+      "filename": "Camel",
       "frame": {
         "x": 0,
         "y": 1024,
@@ -151,7 +151,7 @@
       }
     },
     {
-      "filename": "Cat Colour",
+      "filename": "Cat",
       "frame": {
         "x": 0,
         "y": 1536,
@@ -201,7 +201,7 @@
       }
     },
     {
-      "filename": "Chicken Colour",
+      "filename": "Chicken",
       "frame": {
         "x": 256,
         "y": 0,
@@ -226,7 +226,7 @@
       }
     },
     {
-      "filename": "Chicken Running Colour",
+      "filename": "Chicken Running",
       "frame": {
         "x": 512,
         "y": 0,
@@ -251,7 +251,7 @@
       }
     },
     {
-      "filename": "Cow Colour",
+      "filename": "Cow",
       "frame": {
         "x": 768,
         "y": 0,
@@ -376,7 +376,7 @@
       }
     },
     {
-      "filename": "Donkey 7 Colour",
+      "filename": "Donkey 7",
       "frame": {
         "x": 256,
         "y": 256,
@@ -401,7 +401,7 @@
       }
     },
     {
-      "filename": "Donkey Colour",
+      "filename": "Donkey",
       "frame": {
         "x": 256,
         "y": 512,
@@ -451,7 +451,7 @@
       }
     },
     {
-      "filename": "Dove Colour",
+      "filename": "Dove",
       "frame": {
         "x": 256,
         "y": 1024,
@@ -476,7 +476,7 @@
       }
     },
     {
-      "filename": "Elephant Colour",
+      "filename": "Elephant",
       "frame": {
         "x": 256,
         "y": 1280,
@@ -526,7 +526,7 @@
       }
     },
     {
-      "filename": "Frog Colour",
+      "filename": "Frog",
       "frame": {
         "x": 256,
         "y": 1792,
@@ -551,7 +551,7 @@
       }
     },
     {
-      "filename": "Goat Brown Colour",
+      "filename": "Goat Brown",
       "frame": {
         "x": 512,
         "y": 256,
@@ -576,7 +576,7 @@
       }
     },
     {
-      "filename": "Goat Colour",
+      "filename": "Goat",
       "frame": {
         "x": 768,
         "y": 256,
@@ -601,7 +601,7 @@
       }
     },
     {
-      "filename": "Innocent Lamb Colour",
+      "filename": "Innocent Lamb",
       "frame": {
         "x": 1024,
         "y": 256,
@@ -626,7 +626,7 @@
       }
     },
     {
-      "filename": "Kangaroo Colour",
+      "filename": "Kangaroo",
       "frame": {
         "x": 1280,
         "y": 256,
@@ -651,7 +651,7 @@
       }
     },
     {
-      "filename": "Koala Colour",
+      "filename": "Koala",
       "frame": {
         "x": 1536,
         "y": 256,
@@ -676,7 +676,7 @@
       }
     },
     {
-      "filename": "Lamb 1 Colour",
+      "filename": "Lamb 1",
       "frame": {
         "x": 1792,
         "y": 256,
@@ -701,7 +701,7 @@
       }
     },
     {
-      "filename": "Lamb 3 Colour",
+      "filename": "Lamb 3",
       "frame": {
         "x": 512,
         "y": 512,
@@ -726,7 +726,7 @@
       }
     },
     {
-      "filename": "Lamb 4 Colour",
+      "filename": "Lamb 4",
       "frame": {
         "x": 512,
         "y": 768,
@@ -751,7 +751,7 @@
       }
     },
     {
-      "filename": "Lamb 5 Colour",
+      "filename": "Lamb 5",
       "frame": {
         "x": 512,
         "y": 1024,
@@ -776,7 +776,7 @@
       }
     },
     {
-      "filename": "Lamb Colour",
+      "filename": "Lamb",
       "frame": {
         "x": 512,
         "y": 1280,
@@ -801,7 +801,7 @@
       }
     },
     {
-      "filename": "Lamb Running 1 Colour",
+      "filename": "Lamb Running 1",
       "frame": {
         "x": 512,
         "y": 1536,
@@ -826,7 +826,7 @@
       }
     },
     {
-      "filename": "Lamb Running 2 Colour",
+      "filename": "Lamb Running 2",
       "frame": {
         "x": 512,
         "y": 1792,
@@ -851,7 +851,7 @@
       }
     },
     {
-      "filename": "Lamb Running 3 Colour",
+      "filename": "Lamb Running 3",
       "frame": {
         "x": 768,
         "y": 512,
@@ -876,7 +876,7 @@
       }
     },
     {
-      "filename": "Lamb Running 4 Colour",
+      "filename": "Lamb Running 4",
       "frame": {
         "x": 1024,
         "y": 512,
@@ -901,7 +901,7 @@
       }
     },
     {
-      "filename": "Leopard Colour",
+      "filename": "Leopard",
       "frame": {
         "x": 1280,
         "y": 512,
@@ -926,7 +926,7 @@
       }
     },
     {
-      "filename": "Lion Roar Colour",
+      "filename": "Lion Roar",
       "frame": {
         "x": 1536,
         "y": 512,
@@ -1026,7 +1026,7 @@
       }
     },
     {
-      "filename": "Locus Colour",
+      "filename": "Locus",
       "frame": {
         "x": 768,
         "y": 1280,
@@ -1051,7 +1051,7 @@
       }
     },
     {
-      "filename": "Mouse 2 Colour",
+      "filename": "Mouse 2",
       "frame": {
         "x": 768,
         "y": 1536,
@@ -1076,7 +1076,7 @@
       }
     },
     {
-      "filename": "Mouse Colour",
+      "filename": "Mouse",
       "frame": {
         "x": 768,
         "y": 1792,
@@ -1101,7 +1101,7 @@
       }
     },
     {
-      "filename": "Quail Colour",
+      "filename": "Quail",
       "frame": {
         "x": 1024,
         "y": 768,
@@ -1126,7 +1126,7 @@
       }
     },
     {
-      "filename": "Rabbit Colour",
+      "filename": "Rabbit",
       "frame": {
         "x": 1280,
         "y": 768,
@@ -1151,7 +1151,7 @@
       }
     },
     {
-      "filename": "Rooster Crowing Colour",
+      "filename": "Rooster Crowing",
       "frame": {
         "x": 1536,
         "y": 768,
@@ -1176,7 +1176,7 @@
       }
     },
     {
-      "filename": "Sheep 1 Colour",
+      "filename": "Sheep 1",
       "frame": {
         "x": 1792,
         "y": 768,
@@ -1201,7 +1201,7 @@
       }
     },
     {
-      "filename": "Sheep Colour",
+      "filename": "Sheep",
       "frame": {
         "x": 1024,
         "y": 1024,
@@ -1226,7 +1226,7 @@
       }
     },
     {
-      "filename": "Snake Colour",
+      "filename": "Snake",
       "frame": {
         "x": 1024,
         "y": 1280,
@@ -1276,7 +1276,7 @@
       }
     },
     {
-      "filename": "TRex Colour",
+      "filename": "TRex",
       "frame": {
         "x": 1024,
         "y": 1792,
@@ -1301,7 +1301,7 @@
       }
     },
     {
-      "filename": "Turtle Colour",
+      "filename": "Turtle",
       "frame": {
         "x": 1280,
         "y": 1024,

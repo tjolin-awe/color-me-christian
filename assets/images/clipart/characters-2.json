@@ -1,7 +1,7 @@
 {
   "frames": [
     {
-      "filename": "Queen Sheba Colour",
+      "filename": "Queen Sheba",
       "frame": {
         "x": 0,
         "y": 0,
@@ -26,7 +26,7 @@
       }
     },
     {
-      "filename": "Rich Man Colour",
+      "filename": "Rich Man",
       "frame": {
         "x": 0,
         "y": 256,
@@ -51,7 +51,7 @@
       }
     },
     {
-      "filename": "Roman Soldier Colour",
+      "filename": "Roman Soldier",
       "frame": {
         "x": 0,
         "y": 512,
@@ -76,7 +76,7 @@
       }
     },
     {
-      "filename": "Ruth Colour",
+      "filename": "Ruth",
       "frame": {
         "x": 0,
         "y": 768,
@@ -126,7 +126,7 @@
       }
     },
     {
-      "filename": "Samuel Colour",
+      "filename": "Samuel",
       "frame": {
         "x": 0,
         "y": 1280,
@@ -176,7 +176,7 @@
       }
     },
     {
-      "filename": "Saul Colour",
+      "filename": "Saul",
       "frame": {
         "x": 0,
         "y": 1792,
@@ -201,7 +201,7 @@
       }
     },
     {
-      "filename": "Shepherd Colour",
+      "filename": "Shepherd",
       "frame": {
         "x": 256,
         "y": 0,
@@ -226,7 +226,7 @@
       }
     },
     {
-      "filename": "Solomon Colour",
+      "filename": "Solomon",
       "frame": {
         "x": 512,
         "y": 0,
@@ -351,7 +351,7 @@
       }
     },
     {
-      "filename": "Teacher Colour",
+      "filename": "Teacher",
       "frame": {
         "x": 1792,
         "y": 0,
@@ -376,7 +376,7 @@
       }
     },
     {
-      "filename": "Uriah the Hittite Colour",
+      "filename": "Uriah the Hittite",
       "frame": {
         "x": 256,
         "y": 256,
@@ -426,7 +426,7 @@
       }
     },
     {
-      "filename": "Wiseman 1 Colour",
+      "filename": "Wiseman 1",
       "frame": {
         "x": 256,
         "y": 768,
@@ -451,7 +451,7 @@
       }
     },
     {
-      "filename": "Wiseman 2 Colour",
+      "filename": "Wiseman 2",
       "frame": {
         "x": 256,
         "y": 1024,
@@ -476,7 +476,7 @@
       }
     },
     {
-      "filename": "Wiseman 3 Colour",
+      "filename": "Wiseman 3",
       "frame": {
         "x": 256,
         "y": 1280,
@@ -526,7 +526,7 @@
       }
     },
     {
-      "filename": "Witch of Endor Colour",
+      "filename": "Witch of Endor",
       "frame": {
         "x": 256,
         "y": 1792,
@@ -551,7 +551,7 @@
       }
     },
     {
-      "filename": "Wounded Man Colour",
+      "filename": "Wounded Man",
       "frame": {
         "x": 512,
         "y": 256,

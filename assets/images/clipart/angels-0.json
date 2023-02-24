@@ -1,7 +1,7 @@
 {
   "frames": [
     {
-      "filename": "Angel Celebrating Colour",
+      "filename": "Angel Celebrating",
       "frame": {
         "x": 0,
         "y": 0,
@@ -26,7 +26,7 @@
       }
     },
     {
-      "filename": "Angel Praying Colour",
+      "filename": "Angel Praying",
       "frame": {
         "x": 0,
         "y": 256,
@@ -51,7 +51,7 @@
       }
     },
     {
-      "filename": "Angel Welcome Colour",
+      "filename": "Angel Welcome",
       "frame": {
         "x": 0,
         "y": 512,
@@ -76,7 +76,7 @@
       }
     },
     {
-      "filename": "Angel With Harp Colour",
+      "filename": "Angel With Harp",
       "frame": {
         "x": 0,
         "y": 768,
@@ -126,7 +126,7 @@
       }
     },
     {
-      "filename": "Guardian Angel 2 Colour",
+      "filename": "Guardian Angel 2",
       "frame": {
         "x": 0,
         "y": 1280,
@@ -151,7 +151,7 @@
       }
     },
     {
-      "filename": "Guardian Angel 3 Colour",
+      "filename": "Guardian Angel 3",
       "frame": {
         "x": 0,
         "y": 1536,
@@ -176,7 +176,7 @@
       }
     },
     {
-      "filename": "Guardian Angel 4 Colour",
+      "filename": "Guardian Angel 4",
       "frame": {
         "x": 0,
         "y": 1792,
@@ -226,7 +226,7 @@
       }
     },
     {
-      "filename": "Herald Angel 2 Colour",
+      "filename": "Herald Angel 2",
       "frame": {
         "x": 512,
         "y": 0,
@@ -251,7 +251,7 @@
       }
     },
     {
-      "filename": "Herald Angel Colour",
+      "filename": "Herald Angel",
       "frame": {
         "x": 768,
         "y": 0,
@@ -276,7 +276,7 @@
       }
     },
     {
-      "filename": "Satan Devil Fiery Darts",
+      "filename": "Devil Fiery Darts",
       "frame": {
         "x": 1024,
         "y": 0,
@@ -301,7 +301,7 @@
       }
     },
     {
-      "filename": "Satan Devil Ruler of the World",
+      "filename": "Satan World",
       "frame": {
         "x": 1280,
         "y": 0,
@@ -326,7 +326,7 @@
       }
     },
     {
-      "filename": "Satan Devil Wrestling",
+      "filename": "Satan Wrestling",
       "frame": {
         "x": 1536,
         "y": 0,

@@ -9,7 +9,8 @@ const ActiveToolEnum = {
     FLOOD: 2,
     CLIPART: 3,
     TEXT: 4
-   };
+};
+
 Object.freeze(ActiveToolEnum);
 
 
@@ -46,6 +47,8 @@ class GUI extends Phaser.Sprite {
         this.fontGroup.addChild(this.fontTool);
         this.fontGroup.visible = false;
         this.addChild(this.fontGroup);
+
+        
     }
     
     initColors() {
@@ -53,52 +56,40 @@ class GUI extends Phaser.Sprite {
         textColors.anchor.setTo(0.5);
         this.addChild(textColors);
 
-        this.colorList = [
-            '0xCBAEA0',
-            '0xC5AE78',
-            '0x613D1B',
-            '0xB17E47',
+        this.btnPreviousPalette = this.game.add.button(textColors.x - 100, textColors.y, 'mainMenu', this.previousPalette, this, 'button_up_on', 'button_up_off');   
+        this.btnPreviousPalette.anchor.setTo(0.5);
+        this.btnPreviousPalette.angle = 270;
+        this.btnPreviousPalette.scale.setTo(0.75);
+  
 
-            '0xD0D0D0',
-            '0x30261D',
-            '0xffb8c6',
-            '0xF0BF87',
-
-            '0x911eb4',
-            '0x458CCC',
-            '0x7CC576',
-            '0x7B4F42',
-
+        this.btnNextPalette = this.game.add.button(textColors.x + 100, textColors.y, 'mainMenu', this.nextPalette, this, 'button_up_on', 'button_up_off');
+        this.btnNextPalette.anchor.setTo(0.5);
+        this.btnNextPalette.angle = 90;
+        this.btnNextPalette.scale.setTo(0.75);
+        
+        this.addChild(this.btnNextPalette);
        
-       
+        
+        this.addChild(this.btnPreviousPalette);
 
-            '0xe6194b',
-            '0xffac22',
-            '0xffe119',
-            '0xFFFFFF',
-            '0xf58231',
-            '0x911eb4',
-            '0x46f0f0',
-            '0xf032e6',
-            '0xd2f53c',
-            '0xfabebe',
-            '0x008080',
-            '0xe6beff',
-            '0x000080',
-            '0x808080',
-            '0xFFFFFF',
-            '0x000000'
-        ];
-
-        this.colors = [];
+        
+        this.palettes = this.game.cache.getJSON('palettes');
+        this.currentPalette = 0;
 
         let offsetX = 60;
         let offsetY = 95;
         let width = 72;
         let height = 74;
+        this.colors = [];
+        this.paletteSelection = []
+        for (let i = 0; i < this.palettes.length; i++) {
+            this.paletteSelection.push(0);
+        }
+
 
         for (let i = 0; i < 16; i++) {
-            let cb = new ColorButton(this.game, offsetX + (i % 4) * width, offsetY + Math.floor(i / 4) * height, this.colorList[i], this.changeSelectedColor, this);
+            console.log(this.palettes[this.currentPalette][i].color);
+            let cb = new ColorButton(this.game, i, offsetX + (i % 4) * width, offsetY + Math.floor(i / 4) * height, this.palettes[this.currentPalette][i].color, this.changeSelectedColor, this);
             this.addChild(cb);
             this.colors.push(cb);
         }
@@ -106,12 +97,41 @@ class GUI extends Phaser.Sprite {
         this.changeSelectedColor(this.colors[0]);
     }
 
+    switchPalette() {
+        console.log(`current palette: ${this.currentPalette}`);
+        this.game.audio.playSound('click');
+
+        for (let i = 0; i < 16; i++) {
+            this.colors[i].updateColor(this.palettes[this.currentPalette][i].color);
+        }
+
+        this.changeSelectedColor(this.colors[this.paletteSelection[this.currentPalette]])
+    }
+
+    nextPalette(){
+
+        console.log(`current palette: ${this.currentPalette}`)
+        this.currentPalette++;
+        this.currentPalette = this.currentPalette % this.palettes.length;
+
+        this.switchPalette();
+    }
+
+    previousPalette() {
+        this.currentPalette--;
+        console.log(this.palettes.length)
+        if (this.currentPalette < 0)
+            this.currentPalette = this.palettes.length - 1;
+
+        this.switchPalette();
+    }
+
     changeSelectedColor(color, pointer) {
         if(this.selectedColor) {
             this.selectedColor.turnOff();
         }
 
-      
+        this.paletteSelection[this.currentPalette] = color.index;
 
         this.selectedColor = color;
 
@@ -268,9 +288,9 @@ class GUI extends Phaser.Sprite {
         this.tools = {};
        
         this.addChild(this.createTool(ActiveToolEnum.PAINT, 'palette',this.width / 4 - buffer, posY, this.togglePaintTools));
-        this.addChild(this.createTool(ActiveToolEnum.FLOOD, 'floodfill',this.width / 2 - buffer, posY, this.toggleFloodTools));
+        this.addChild(this.createTool(ActiveToolEnum.FLOOD, 'floodfill',this.width / 2 - buffer - 4, posY, this.toggleFloodTools));
         this.addChild(this.createTool(ActiveToolEnum.TEXT,'text', this.width / 2 + buffer + 8, posY, this.toggleTextTools));
-        this.addChild(this.createTool(ActiveToolEnum.CLIPART,'clipart',this.width - this.width / 4 + buffer - 8, posY, this.toggleClipTools));
+        this.addChild(this.createTool(ActiveToolEnum.CLIPART,'clipart',this.width - this.width / 4 + buffer, posY, this.toggleClipTools));
      
         this.toolBorder = this.game.add.image(0, 0, 'tool_border');
         this.toolBorder.anchor.setTo(0.5);

@@ -30,18 +30,20 @@ class PreloadState {
         this.game.load.image('palette','assets/images/palette.png');
         this.game.load.image('floodfill', 'assets/images/floodfill.png');
         this.game.load.image('text', 'assets/images/text.png');
+        this.game.load.json('palettes', 'palettes.json');
 
          // load assets    
        this.game.load.image('clipart', 'assets/images/clipart.png');
          this.game.load.atlas('box', 'assets/images/box.png', 'assets/images/box.json');
 
-        this.game.load.image('button_studio_on', 'assets/images/button_studio_on.png');
-        this.game.load.image('button_studio_off', 'assets/images/button_studio_off.png');
+        this.game.load.atlas('studio_buttons','assets/images/studio_button.png', 'assets/images/studio_button.json');
         this.game.audio.loadAudio('ost', 'ost');
         this.game.audio.loadAudio('click', 'click');
         this.game.load.image('font_icon_on','assets/images/font_on.png');
         this.game.load.image('font_icon_off','assets/images/font_off.png');
         this.game.load.image('tool_border', 'assets/images/tool_border.png');
+    
+        
         // pictures
         let pictures = this.game.cache.getJSON('settings').pictures;
         for (let i = 0; i < pictures; i++) {

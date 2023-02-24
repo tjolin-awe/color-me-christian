@@ -1,7 +1,7 @@
 {
   "frames": [
     {
-      "filename": "Abigal Colour",
+      "filename": "Abigal",
       "frame": {
         "x": 0,
         "y": 0,
@@ -26,7 +26,7 @@
       }
     },
     {
-      "filename": "Abner Colour",
+      "filename": "Abner",
       "frame": {
         "x": 0,
         "y": 256,
@@ -76,7 +76,7 @@
       }
     },
     {
-      "filename": "Absalom Colour",
+      "filename": "Absalom",
       "frame": {
         "x": 0,
         "y": 768,
@@ -101,7 +101,7 @@
       }
     },
     {
-      "filename": "Adam & Eve Colour",
+      "filename": "Adam & Eve",
       "frame": {
         "x": 0,
         "y": 1024,
@@ -126,7 +126,7 @@
       }
     },
     {
-      "filename": "Adam Eve Innocent",
+      "filename": "Adam & Eve Innocent",
       "frame": {
         "x": 0,
         "y": 1280,
@@ -151,7 +151,7 @@
       }
     },
     {
-      "filename": "Ahab Colour",
+      "filename": "Ahab",
       "frame": {
         "x": 0,
         "y": 1536,
@@ -176,7 +176,7 @@
       }
     },
     {
-      "filename": "Amalekite Raider Colour",
+      "filename": "Amalekite Raider",
       "frame": {
         "x": 0,
         "y": 1792,
@@ -226,7 +226,7 @@
       }
     },
     {
-      "filename": "Asahel Colour",
+      "filename": "Asahel",
       "frame": {
         "x": 512,
         "y": 0,
@@ -251,7 +251,7 @@
       }
     },
     {
-      "filename": "Bathsheba Colour",
+      "filename": "Bathsheba",
       "frame": {
         "x": 768,
         "y": 0,
@@ -276,7 +276,7 @@
       }
     },
     {
-      "filename": "Benaiah Colour",
+      "filename": "Benaiah",
       "frame": {
         "x": 1024,
         "y": 0,
@@ -301,7 +301,7 @@
       }
     },
     {
-      "filename": "Boaz Colour",
+      "filename": "Boaz",
       "frame": {
         "x": 1280,
         "y": 0,
@@ -426,7 +426,7 @@
       }
     },
     {
-      "filename": "David Shepherd Colour",
+      "filename": "David Shepherd",
       "frame": {
         "x": 256,
         "y": 768,
@@ -451,7 +451,7 @@
       }
     },
     {
-      "filename": "David Warrior Colour",
+      "filename": "David Warrior",
       "frame": {
         "x": 256,
         "y": 1024,
@@ -501,7 +501,7 @@
       }
     },
     {
-      "filename": "Davids Mighty Men Colour",
+      "filename": "David's Mighty Men",
       "frame": {
         "x": 256,
         "y": 1536,
@@ -576,7 +576,7 @@
       }
     },
     {
-      "filename": "Demon Possessed Man Colour",
+      "filename": "Demon Possessed Man",
       "frame": {
         "x": 768,
         "y": 256,
@@ -601,7 +601,7 @@
       }
     },
     {
-      "filename": "Egypt Guard",
+      "filename": "Egyptian Guard",
       "frame": {
         "x": 1024,
         "y": 256,
@@ -626,7 +626,7 @@
       }
     },
     {
-      "filename": "Egypt Queen",
+      "filename": "Egyptian Queen",
       "frame": {
         "x": 1280,
         "y": 256,
@@ -676,7 +676,7 @@
       }
     },
     {
-      "filename": "Elijah Colour",
+      "filename": "Elijah",
       "frame": {
         "x": 1792,
         "y": 256,
@@ -701,7 +701,7 @@
       }
     },
     {
-      "filename": "Elijah Running Colour",
+      "filename": "Elijah Running",
       "frame": {
         "x": 512,
         "y": 512,
@@ -751,7 +751,7 @@
       }
     },
     {
-      "filename": "Elisha the Prophet Colour",
+      "filename": "Elisha the Prophet",
       "frame": {
         "x": 512,
         "y": 1024,
@@ -776,7 +776,7 @@
       }
     },
     {
-      "filename": "Esther Colour",
+      "filename": "Esther",
       "frame": {
         "x": 512,
         "y": 1280,
@@ -876,7 +876,7 @@
       }
     },
     {
-      "filename": "Goliath Colour",
+      "filename": "Goliath",
       "frame": {
         "x": 1024,
         "y": 512,
@@ -901,7 +901,7 @@
       }
     },
     {
-      "filename": "Goliath Giant Colour",
+      "filename": "Goliath Giant",
       "frame": {
         "x": 1280,
         "y": 512,
@@ -926,7 +926,7 @@
       }
     },
     {
-      "filename": "Good Samaritan Colour",
+      "filename": "Good Samaritan",
       "frame": {
         "x": 1536,
         "y": 512,
@@ -951,7 +951,7 @@
       }
     },
     {
-      "filename": "Hannah Colour",
+      "filename": "Hannah",
       "frame": {
         "x": 1792,
         "y": 512,
@@ -976,7 +976,7 @@
       }
     },
     {
-      "filename": "Herod A Colour",
+      "filename": "Herod A",
       "frame": {
         "x": 768,
         "y": 768,
@@ -1001,7 +1001,7 @@
       }
     },
     {
-      "filename": "Herod Colour",
+      "filename": "Herod",
       "frame": {
         "x": 768,
         "y": 1024,
@@ -1076,7 +1076,7 @@
       }
     },
     {
-      "filename": "Ishbosheth Colour",
+      "filename": "Ishbosheth",
       "frame": {
         "x": 768,
         "y": 1792,
@@ -1126,7 +1126,7 @@
       }
     },
     {
-      "filename": "Jehu Colour",
+      "filename": "Jehu",
       "frame": {
         "x": 1280,
         "y": 768,
@@ -1151,7 +1151,7 @@
       }
     },
     {
-      "filename": "Jesus Ascending Colour",
+      "filename": "Jesus Ascending",
       "frame": {
         "x": 1536,
         "y": 768,
@@ -1176,7 +1176,7 @@
       }
     },
     {
-      "filename": "Jesus Baby Colour 2",
+      "filename": "Jesus Baby 2",
       "frame": {
         "x": 1792,
         "y": 768,
@@ -1201,7 +1201,7 @@
       }
     },
     {
-      "filename": "Jesus Baby Colour 3",
+      "filename": "Jesus Baby 3",
       "frame": {
         "x": 1024,
         "y": 1024,
@@ -1226,7 +1226,7 @@
       }
     },
     {
-      "filename": "Jesus Baby Colour 4",
+      "filename": "Jesus Baby 4",
       "frame": {
         "x": 1024,
         "y": 1280,
@@ -1251,7 +1251,7 @@
       }
     },
     {
-      "filename": "Jesus Baby Colour",
+      "filename": "Jesus Baby",
       "frame": {
         "x": 1024,
         "y": 1536,
@@ -1326,7 +1326,7 @@
       }
     },
     {
-      "filename": "Jesus Breaking Bread Colour",
+      "filename": "Jesus Breaking Bread",
       "frame": {
         "x": 1536,
         "y": 1024,
@@ -1351,7 +1351,7 @@
       }
     },
     {
-      "filename": "Jesus Christ Transfigured",
+      "filename": "Jesus Transfigured",
       "frame": {
         "x": 1792,
         "y": 1024,
@@ -1401,7 +1401,7 @@
       }
     },
     {
-      "filename": "Jesus Fishing Colour",
+      "filename": "Jesus Fishing",
       "frame": {
         "x": 1280,
         "y": 1536,
@@ -1526,7 +1526,7 @@
       }
     },
     {
-      "filename": "Jesus Loaves and fish Colour",
+      "filename": "Jesus Loaves and Fish",
       "frame": {
         "x": 1536,
         "y": 1792,
@@ -1551,7 +1551,7 @@
       }
     },
     {
-      "filename": "Jesus On Trial Colour",
+      "filename": "Jesus on Trial",
       "frame": {
         "x": 1792,
         "y": 1536,
@@ -1601,7 +1601,7 @@
       }
     },
     {
-      "filename": "Shepherd Boy Colour",
+      "filename": "Shepherd Boy",
       "frame": {
         "x": 256,
         "y": 768,

@@ -1,7 +1,7 @@
 {
   "frames": [
     {
-      "filename": "Burning Bush Colour",
+      "filename": "Burning Bush",
       "frame": {
         "x": 0,
         "y": 0,
@@ -51,7 +51,7 @@
       }
     },
     {
-      "filename": "Cave of Adullam Colour",
+      "filename": "Cave of Adullam",
       "frame": {
         "x": 0,
         "y": 512,
@@ -126,7 +126,7 @@
       }
     },
     {
-      "filename": "Dates Colour",
+      "filename": "Dates",
       "frame": {
         "x": 0,
         "y": 1280,
@@ -151,7 +151,7 @@
       }
     },
     {
-      "filename": "Doorway entrance",
+      "filename": "Doorway Entrance",
       "frame": {
         "x": 0,
         "y": 1536,
@@ -226,7 +226,7 @@
       }
     },
     {
-      "filename": "Empty Tomb Colour",
+      "filename": "Empty Tomb",
       "frame": {
         "x": 512,
         "y": 0,
@@ -276,7 +276,7 @@
       }
     },
     {
-      "filename": "Fig Leaf Colour",
+      "filename": "Fig Leaf",
       "frame": {
         "x": 1024,
         "y": 0,
@@ -301,7 +301,7 @@
       }
     },
     {
-      "filename": "Figs Colour",
+      "filename": "Figs",
       "frame": {
         "x": 1280,
         "y": 0,
@@ -651,7 +651,7 @@
       }
     },
     {
-      "filename": "Grass and wall",
+      "filename": "Grass and Wall",
       "frame": {
         "x": 1536,
         "y": 256,
@@ -701,7 +701,7 @@
       }
     },
     {
-      "filename": "Israelite dwelling house 2",
+      "filename": "Israelite House 2",
       "frame": {
         "x": 512,
         "y": 512,
@@ -726,7 +726,7 @@
       }
     },
     {
-      "filename": "Israelite dwelling house Colour",
+      "filename": "Israelite House",
       "frame": {
         "x": 512,
         "y": 768,
@@ -751,7 +751,7 @@
       }
     },
     {
-      "filename": "Israelite dwelling house Single",
+      "filename": "Israelite House Single",
       "frame": {
         "x": 512,
         "y": 1024,
@@ -776,7 +776,7 @@
       }
     },
     {
-      "filename": "Manger Colour",
+      "filename": "Manger",
       "frame": {
         "x": 512,
         "y": 1280,
@@ -851,7 +851,7 @@
       }
     },
     {
-      "filename": "Olive Leaf Colour",
+      "filename": "Olive Leaf",
       "frame": {
         "x": 768,
         "y": 512,
@@ -926,7 +926,7 @@
       }
     },
     {
-      "filename": "Palm Leaves Colour",
+      "filename": "Palm Leaves",
       "frame": {
         "x": 1536,
         "y": 512,
@@ -951,7 +951,7 @@
       }
     },
     {
-      "filename": "Rainbow Colour",
+      "filename": "Rainbow",
       "frame": {
         "x": 1792,
         "y": 512,
@@ -1026,7 +1026,7 @@
       }
     },
     {
-      "filename": "Star Colour",
+      "filename": "Star",
       "frame": {
         "x": 768,
         "y": 1280,
@@ -1051,7 +1051,7 @@
       }
     },
     {
-      "filename": "Temple Colour",
+      "filename": "Temple",
       "frame": {
         "x": 768,
         "y": 1536,
@@ -1076,7 +1076,7 @@
       }
     },
     {
-      "filename": "Tree of Knowledge Colour",
+      "filename": "Tree of Knowledge",
       "frame": {
         "x": 768,
         "y": 1792,
@@ -1126,7 +1126,7 @@
       }
     },
     {
-      "filename": "Well Colour",
+      "filename": "Well",
       "frame": {
         "x": 1280,
         "y": 768,
@@ -1201,7 +1201,7 @@
       }
     },
     {
-      "filename": "World Colour",
+      "filename": "World",
       "frame": {
         "x": 1024,
         "y": 1024,
