@@ -10,19 +10,25 @@ class SelectPictureState {
         this.game.noclips = true;
         let offsetX = 50;
         let offsetY = 50;
-        let width = 279;
-        let height = 200;
+        let width = 500;
+        let height = 450;
 
         for (let i = 0; i < this.pictures; i++) {
-            let xx = offsetX + (i % 4) * width;
-            let yy = offsetY + Math.floor(i / 4) * height;
+            let xx = offsetX + (i % 3) * width;
+            let yy = offsetY + Math.floor(i / 3) * height;
             let bg = this.game.add.image(xx, yy, 'mainMenu', 'picture_bg');
-
-            let pic = this.game.add.image(0, 0, `picture${i+1}`);
-            pic.scale.setTo(0.25);
-            bg.addChild(pic);
+            bg.width = 450;
+            bg.height = 350;
             
-            bg.addChild(this.game.add.image(0, 0, 'mainMenu', 'picture_border'));
+            let pic = this.game.add.image(0, 0, `picture${i+1}`);
+            pic.scale.setTo(0.15);
+            pic.left = pic.width / 2 + 15;
+            pic.top = pic.height / 2 + 10;
+            pic.anchor.setTo(0.5);
+            bg.addChild(pic);
+            let border = this.game.add.image(0,0,'mainMenu', 'picture_border');
+          
+            bg.addChild(border);
 
             bg.inputEnabled = true;
             bg.input.useHandCursor = true;
@@ -33,6 +39,7 @@ class SelectPictureState {
             }, this);
 
             this.group.add(bg);
+            
         }
 
         this.button_menu = this.game.add.button(this.game.world.width - 75, 85, 'mainMenu', function(){
@@ -50,13 +57,13 @@ class SelectPictureState {
         }, this, 'button_down_on', 'button_down_off');
         this.button_down.anchor.setTo(0.5);
 
-        this.lastY = offsetY + Math.floor((this.pictures - 1) / 4) * height;
+        this.lastY = offsetY + Math.floor((this.pictures - 1) / 3) * height;
         this.updateButtons();
     }
 
     slide(direction) {
         if (this.sliding) return;
-        var height = direction === 'up' ? -600 : 600;
+        var height = direction === 'up' ? -900 : 900;
         
         if (this.group.y + height < -(this.lastY + 50) || this.group.y + height > 0) return;
         this.sliding = true;

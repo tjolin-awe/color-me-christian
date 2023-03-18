@@ -34,19 +34,6 @@ class ColorButton extends Phaser.Sprite {
         this.tint = '0xb4854e';
 
 
-        if (this.game.boundingBox && this.game.boundingBox.clipart) {
-           
-            if (this.game.boundingBox.clipart instanceof GameText) {
-
-             
-
-                console.log('changing color');
-                let newcolor = `#${this.color.substring(2)}`;
-                this.game.boundingBox.clipart.addColor(newcolor,0);
-                this.game.boundingBox.clipart.currentColor = newcolor;
-            }
-
-        }
     }
 
     turnOff() {

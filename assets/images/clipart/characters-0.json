@@ -126,7 +126,7 @@
       }
     },
     {
-      "filename": "Adam & Eve Innocent",
+      "filename": "Adam & Eve\n Innocent",
       "frame": {
         "x": 0,
         "y": 1280,
@@ -501,7 +501,7 @@
       }
     },
     {
-      "filename": "David's Mighty Men",
+      "filename": "David's Mighty\n Men",
       "frame": {
         "x": 256,
         "y": 1536,
@@ -576,7 +576,7 @@
       }
     },
     {
-      "filename": "Demon Possessed Man",
+      "filename": "Demon\n Possessed Man",
       "frame": {
         "x": 768,
         "y": 256,
@@ -1326,7 +1326,7 @@
       }
     },
     {
-      "filename": "Jesus Breaking Bread",
+      "filename": "Jesus Breaking\n Bread",
       "frame": {
         "x": 1536,
         "y": 1024,
@@ -1351,7 +1351,7 @@
       }
     },
     {
-      "filename": "Jesus Transfigured",
+      "filename": "Jesus \nTransfigured",
       "frame": {
         "x": 1792,
         "y": 1024,

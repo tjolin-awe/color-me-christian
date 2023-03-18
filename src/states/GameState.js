@@ -6,6 +6,7 @@ require('../components/BitmapDataFloodFill');
 const { GameText} = require('../classes/game/GameText');
 const { GameEvent} = require('../events/GameEvents');
 const { UndoManager} = require('../classes/game/UndoManager');
+
 class GameState {
     constructor(game) {
         this.game = game;
@@ -13,6 +14,7 @@ class GameState {
         this.tolerance = 50;
         this.key = '';
         this.isPainting = false;
+        this.zoom = 1;
 
         this.game.events = new GameEvent();
         this.game.events.registerEvent('ObjectReleased');
@@ -20,6 +22,8 @@ class GameState {
         this.game.events.registerEvent('ObjectDestroyed');
         this.game.events.registerEvent('ObjectResized');
         this.game.events.registerEvent('ObjectStamped');
+        this.game.events.registerEvent('ObjectRotated');
+        this.game.events.registerEvent('ObjectFlipped');
 
              
         this.game.events.addEventListener('ObjectReleased', this.onObjectReleased, this);
@@ -27,6 +31,9 @@ class GameState {
         this.game.events.addEventListener('ObjectDestroyed', this.onObjectDestroyed, this);
         this.game.events.addEventListener('ObjectResized', this.onObjectResized, this);
         this.game.events.addEventListener('ObjectStamped', this.onObjectStamped, this);
+        this.game.events.addEventListener('ObjectFlipped', this.onObjectFlipped, this);
+        this.game.events.addEventListener('ObjectRotated', this.onObjectRotated, this);
+      
 
     }
 
@@ -44,20 +51,22 @@ class GameState {
         this.game.gui = new GUI(this.game, this.saveImage, this);
 
         this.game.stage.backgroundColor = '#fff';
-        this.bmd = this.game.make.bitmapData(this.game.world.width - 320, 720);
+        this.bmd = this.game.make.bitmapData(this.game.world.width - 320, 1050);
         this.bmdContainer = this.bmd.addToWorld(0,0);
 
     
         this.game.bmdContainer = this.bmdContainer;
+        this.bmdContainer.inputEnabled = true;   
+       
         this.game.bmd = this.bmd;
 
         //  Enable input for this sprite, so we can tell when it's clicked.
-        this.bmdContainer.inputEnabled = true;      
+       
         this.bmdContainer.events.onInputDown.add(this.fill, this);
 
         this.game.input.addMoveCallback(this.paint, this);
    
-        this.bmd.fill(255, 255, 255, 1);
+       this.bmd.fill(255, 255, 255, 1);
 
         if (this.game.currentPicture) {
         
@@ -97,11 +106,8 @@ class GameState {
         this.game.input.keyboard.addKeyCapture(Phaser.Keyboard.QUOTES);
         this.game.input.keyboard.addKeyCapture(Phaser.Keyboard.SPACEBAR);
         this.game.input.keyboard.addCallbacks(this, null, this.keyPress, null);
-        console.log('keyboard object');
-        console.log(this.game.input.keyboard);
-
-        // this.game.input.keyboard.on('keydown', this.keyPress);
        
+        this.game.gui.togglePaintTools(true);
     }
 
     saveImage() {
@@ -110,7 +116,6 @@ class GameState {
         this.game.art_sprites.sort('z', Phaser.Group.SORT_ASCENDING);
 
         this.game.art_sprites.children.forEach((sprite)=> {
-            console.log(`Id: ${sprite.Id}, Z: ${sprite.z}, Name:${sprite.name}`);
             if (sprite.alive)
                 this.game.events.dispatchEvent('ObjectStamped', sprite);
         });
@@ -135,8 +140,6 @@ class GameState {
 
 
         let style = { font: this.game.gui.fontTool.getCurrentFont(), fill: `#${this.game.gui.color.substring(2)}`, boundsAlignH: "center", boundsAlignV: "middle" };
-        
-        console.log(style);
         let text = new GameText(this.game, this.game.bmd.width / 2, this.game.bmd.height / 2, 'Enter text here', style, this);
         text.fontIndex = this.game.gui.fontTool.index;
         this.game.boundingBox.captureClipart(text);
@@ -146,24 +149,72 @@ class GameState {
 
     }
     paint(pointer, x, y) {
-        if (pointer.isDown && this.game.gui.mode == ActiveToolEnum.PAINT) {
-            let rgb = Phaser.Color.getWebRGB(this.game.gui.color);
+        if (pointer.isDown && (this.game.gui.mode == ActiveToolEnum.PAINT || this.game.gui.mode == ActiveToolEnum.ERASER)) {
+            
+            
+            let rgb = this.game.gui.mode == ActiveToolEnum.ERASER ? Phaser.Color.getWebRGB('0xFFFFFF') : Phaser.Color.getWebRGB(this.game.gui.color);
             let rgba = rgb.slice(0, -2) + '0.2)';
+            
             
             if (this.game.gui.brush.type === 'square') {
                 let xx = pointer.x - this.game.gui.brush.size / 2;
                 let yy = pointer.y - this.game.gui.brush.size / 2;
                 let width = this.game.gui.brush.size;
-                this.bmd.rect(xx, yy, width, width, rgba);
+                 this.bmd.rect(xx, yy, width, width, rgba);
+               
             } else {
+
                 this.bmd.circle(x, y, this.game.gui.brush.size / 2, rgba);
             }
+       
+            if (this.game.currentPicture)
+            this.bmd.copy(this.key);
+     
             //  And update the pixel data, ready for the next fill
             this.bmd.update();
-            
+
         }
     }
 
+    print() {
+
+        //  You can add whatever HTML you need here, such as a logo, or copyright text,
+        //  and it will be printed along with the image.
+
+        this.game.audio.playSound('click');
+        this.game.art_sprites.sort('z', Phaser.Group.SORT_ASCENDING);
+
+        this.game.art_sprites.children.forEach((sprite)=> {
+            if (sprite.alive)
+                this.game.events.dispatchEvent('ObjectStamped', sprite);
+        });
+
+        this.game.bmd.update();
+        this.game.boundingBox.hide();
+
+
+        if (this.game.currentPicture) {
+            if (this.game.cache.getJSON('settings').preserveLines) {
+                this.bmd.draw(`picture${this.game.currentPicture}`, 0, 0);
+            }
+        }
+
+        var win = window.open();
+        win.title = "Print";
+        let data = this.bmd.canvas.toDataURL();
+        console.log(data);
+        win.document.write("<html><head><title>Print</title></head><body>")
+        win.document.write("<br><img src='" + this.bmd.canvas.toDataURL() + "' width='1000px'/></body></html>");
+        win.document.close();
+        
+        setTimeout(function() { 
+            win.print();
+            win.close();
+        }, 500)
+    
+  
+
+    }
     
 
     openClipartSelector(category, pointer) {
@@ -174,11 +225,15 @@ class GameState {
        
         this.game.audio.playSound('click');
         let clone = new Clipart(this.game, this.game.bmdContainer.width / 2 , this.game.bmdContainer.height / 2, clipart.lazyload_texture, clipart.lazyload_frame, pointer, this);
+       
+       // let clone = new Clipart(this.game, this.game.bmdContainer.width / 2 , this.game.bmdContainer.height / 2, 'debug_img', null, pointer, this);
+       
         clone.name = clipart.name;
         this.game.boundingBox.captureClipart(clone);
         this.game.clips.hide();
         this.game.art_sprites.visible = true;
         this.game.art_sprites.addChild(clone);
+        this.game.world.bringToTop(this.game.gui);
 
     }
 
@@ -193,9 +248,6 @@ class GameState {
     }
     onDragStop(clipart, pointer) {
 
-        console.log('drop event');
-
-       
         if (pointer.x > 0 && 
             pointer.x < this.game.bmdContainer.width &&
             pointer.y > 0 &&
@@ -211,6 +263,7 @@ class GameState {
      
     }
         
+
 
 
      /**
@@ -256,8 +309,7 @@ class GameState {
 
     }
     keyPress(data) {
-     
-        console.log(data);
+
         if (data.keyCode == 27) {
 
             // Escape pressed
@@ -271,11 +323,10 @@ class GameState {
             // CTRL-Z (undo)
             this.game.undoManager.undo();
 
-           
-
-        } else {
+        }
+         else {
             if (this.game.boundingBox.isText) {
-                this.game.boundingBox.element.addCharacter(data);
+                this.game.boundingBox.clipart.addCharacter(data);
             }
         }
 
@@ -320,7 +371,6 @@ class GameState {
             if (!object)
                 return;
 
-            console.log(object);
             object.selected = false;
 
 
@@ -333,15 +383,32 @@ class GameState {
             console.log(`Released { ${object.Id}, ${object.artType}}`);
         }
 
+        onObjectFlipped(object) {
+            if (!object)
+                return;
+                console.log(`Flipped { ${object.Id}, ${object.artType}}`);
+        }
+
+        
+
         onObjectResized(object) {
             
             if (!object)
                 return;
 
-            console.log(`Resized { ${object.Id}, ${object.artType}}`);
+                console.log(`Resized { ${object.Id}, ${object.artType}}`);
 
         }
 
+        onObjectRotated(object, pointer) {
+            if (!object)
+                return;
+
+            console.log(`Rotated { ${object.Id}, ${object.artType}} to ${object.angle} degrees`);
+
+
+
+        }
         onObjectStamped(object, pointer) {
             if (!object)
                 return;
@@ -352,12 +419,28 @@ class GameState {
             this.game.undoManager.add('multi', object);
             object.inputEnabled = false;
             object.stamped = true;
+
+            if (object.scale.x < 0) {
+                object.angle = object.angle * -1;
+            }
+            object.updateTransform();
             this.game.bmd.draw(object);
             this.game.bmd.update();
             object.kill();
 
             console.log(`Stamped { ${id}, ${type}}`);
 
+        }
+
+        update() {
+
+            if (this.game.boundingBox)
+                this.game.boundingBox.update();
+        }
+
+        render() {
+            /* if (this.game.boundingBox.clipart) 
+                 this.game.debug.spriteInfo(this.game.boundingBox.clipart, 32, 32); */
         }
    
 }

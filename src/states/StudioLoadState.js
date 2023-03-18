@@ -8,6 +8,8 @@ class StudioLoadState {
         
         this.game.stage.backgroundColor = "#000";
 
+
+
         // show logo and progress bar
         this.preloadLogo = this.game.add.image(this.game.world.width / 2, this.game.world.height / 2 - 100, 'logo');
         this.preloadLogo.anchor.setTo(0.5);
@@ -18,25 +20,33 @@ class StudioLoadState {
 
         let categories = this.game.cache.getJSON('settings').clipartCategories;
 
+       
+
         // Load clipart categories
         categories.forEach(resource => {
             this.game.load.image(`clipart_${resource.key}`, `${resource.icon}`);          
             for (let i = 0; i < resource.sprites.count; i++) {
 
-               
+                
                 this.game.load.json(`json_${resource.key}-${i}`, `${resource.sprites.path}/${resource.key}-${i}.json`);
-                this.game.load.atlas(`${resource.key}-${i}`, 
-                                     `${resource.sprites.path}/${resource.key}-${i}.png`, 
+                
+                
+                if (!this.game.lazy_load)
+                    this.game.load.atlas(`${resource.key}-${i}`, 
+                                     `${resource.sprites.path}/${resource.key}-${i}${this.game.quality}.png`, 
                                      `${resource.sprites.path}/${resource.key}-${i}.json`); 
             }
         });
 
         this.game.audio.loadAudio('dustbin','dustbin');
+
      
     }
 
     create() {
-        this.game.state.start('GameState');
+
+       
+         this.game.state.start('GameState');
     }
 }
 

@@ -11,12 +11,18 @@ class GameText extends Phaser.Text {
         this.initialInput = true;
         this.game.add.existing(this);
         this.currentColor = style.fill;
-       
+        this.anchor.setTo(0.5);
+
+
+        this.originalWidth = this.width;
+        this.originalHeight = this.height;
+        
         this.artType = "GameText";
         this.inputEnabled = true;
         this.input.useHandCursor = true;
         this.preserveRatio = true;
         this.identifier = Math.floor(Math.random() * Date.now());
+
 
         
         //this.context = context;
@@ -56,7 +62,8 @@ class GameText extends Phaser.Text {
         else if(char == 13)
             this.setText(this.text + '\n');
 
-        this.game.boundingBox.updatePositions();
+            this.game.boundingBox.updateBounds();
+            this.game.boundingBox.drawBounds();
     }
     
 
@@ -66,9 +73,12 @@ class GameText extends Phaser.Text {
 
     onDragText(text, pointer) {
 
-        this.game.boundingBox.updatePositions(); 
+        this.game.boundingBox.updateBounds();
+        this.game.boundingBox.drawBounds();
            
     }
+
+   
 
     onDragStart(text, pointer) {
 

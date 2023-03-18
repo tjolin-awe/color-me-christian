@@ -13,6 +13,8 @@ let {SelectPictureState} = require('./states/SelectPictureState');
 let {StudioLoadState} = require('./states/StudioLoadState');
 
 
+
+
 // embed fonts to the page
 embedFonts(fonts);
 
@@ -37,6 +39,30 @@ function startGame() {
         config.gameParentElementId
     );
 
+    game.lazy_load = false;
+    game.quality = 'normal';
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.has('graphics')) {
+        const graphics = urlParams.get('graphics');
+        switch(graphics) {
+            case "low":
+                game.quality = '_low';
+                break;
+            case "xlow":
+                game.quality = '_xlow';
+                break;
+            default:
+                game.quality = 'normal';
+                break;
+        }
+    }
+
+    if (urlParams.has('lazyload')) {
+        game.lazy_load = true;
+    }
+
     // add states
    
     game.state.add('BootState', new BootState(game));
@@ -46,5 +72,11 @@ function startGame() {
     game.state.add('SelectPictureState', new SelectPictureState(game));
     game.state.add('StudioLoadState', new StudioLoadState(game));
     game.state.add('GameState', new GameState(game));
+
+
+   
+
+
+
     game.state.start('BootState');
 }

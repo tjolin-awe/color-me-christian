@@ -49,6 +49,7 @@ class ClipartSelector extends Phaser.Sprite {
      
     }
 
+
     getClipartCategory(key) {
         return this.categories.filter(
             function(resource){ return resource.key == key }
@@ -58,24 +59,28 @@ class ClipartSelector extends Phaser.Sprite {
     show(key) {
 
         this.visible = true;
-      
-        console.log(`Loading ${key} clipart`);
-
         if (this.currentCategory != key) {
 
+          
             const category = this.getClipartCategory(key);
-            console.log(category);
+            this.LoadSlots(category);
+            
+            
+            if (this.game.lazy_load){
 
-            this.onLoadComplete(category);
-            /*this.game.load.onLoadComplete.addOnce(this.onLoadComplete, this, 0, [key, category.sprites.count]);
+                console.log(category);
+               // this.game.load.onLoadComplete.addOnce(this.onLoadComplete, this, 0, [key, category.sprites.count]);
 
-            for (let i = 0; i < category.sprites.count; i++) {
-                this.game.load.atlas(`${category.key}-${i}`, 
-                                     `${category.sprites.path}/${category.key}-${i}.png`, 
-                                     `${category.sprites.path}/${category.key}-${i}.json`);
-            }
+               
+                this.game.load.onFileComplete.add(this.onfileComplete, this);
 
-            this.game.load.start();*/
+                for (let i = 0; i < this.clips.length; i++) {
+
+                    this.game.load.image(this.clips[i].frame, 'assets/images/clipart/characters/' + this.game.quality + '/' + this.clips[i].frame+ '.png');
+                }
+
+                this.game.load.start();
+            } 
         }
         this.currentCategory = key;
     
@@ -86,16 +91,39 @@ class ClipartSelector extends Phaser.Sprite {
         this.visible = false;
     }
 
+    onfileComplete(progress, cacheKey, success, totalLoaded, totalFiles) {
+
+        console.log(progress);
+        console.log(success);
+        console.log(totalLoaded);
+        console.log(totalFiles);
+        console.log(cacheKey);
+        return;
+        for (let i = 0; i < this.clipGroup.children.length; i++) {
+            const child = this.clipGroup.children[i];
+            let found = false;
+            console.log()
+            if (child.name == cacheKey) {
+                child.loadTexture(cacheKey);
+                found = true;
+            }
+
+            if (!found) {
+                console.log('could not find image: ' + cacheKey);
+            }
+            
+        }
+    }
+
+
     getClips(key, cnt=1){
 
         let clips = [];
         for (let c = 0; c < cnt; c++){
             let json = this.game.cache.getJSON(`json_${key}-${c}`);
-           
-            console.log(json);
+        
             for (let i =0; i < json.frames.length; i++) { 
                 let texture = `${key}-${c}`;
-                console.log(texture);
                 clips.push({
                     texture: texture,
                     frame: json.frames[i].filename,   
@@ -105,6 +133,62 @@ class ClipartSelector extends Phaser.Sprite {
         }
         clips.sort((a, b) => a.frame > b.frame);
         return clips;
+    }
+
+    LoadSlots(category) {
+
+        this.clips = this.getClips(category.key, category.sprites.count);
+        
+        let offsetX = 50;
+        let offsetY = 50;
+        let width = 279;
+        let height = 200;
+
+        this.clipGroup.removeAll();
+        this.clipGroup.y = 0;
+      
+        let style = {font: 'Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif', fontSize: '22pt', fill: '#DAB07B', stroke: '#000', strokeThickness: 4 };
+
+        for (let i = 0; i < this.clips.length; i++) {
+           
+           
+            let xx = offsetX + (i % 5) * width;
+            let yy = offsetY + Math.floor(i / 5) * height;
+            let bg = this.game.add.image(xx, yy, 'mainMenu', 'picture_bg');
+            
+            let pic;
+            if (this.game.lazy_load)
+                pic = this.game.add.image(bg.width / 2, bg.height /2);
+            else
+                pic = this.game.add.image(bg.width / 2, bg.height / 2, this.clips[i].texture, this.clips[i].frame);
+            
+            pic.anchor.setTo(0.5);
+            pic.scale.setTo(0.50);
+            pic.name = this.clips[i].frame;
+            bg.addChild(pic);
+            
+            bg.addChild(this.game.add.image(0, 0, 'mainMenu', 'picture_border'));
+            bg.lazyload_texture = this.clips[i].texture;
+            bg.lazyload_frame = this.clips[i].index;
+            bg.inputEnabled = true;
+            bg.input.useHandCursor = true;
+            bg.events.onInputDown.add(this.context.selectClipart, this.context);
+            bg.events.onInputOver.add(this.onMouseOver, this);
+            bg.events.onInputOut.add(this.onMouseOut, this);
+
+            let label = this.game.add.text(17,10, this.clips[i].frame, style);
+            label.visible = false;
+            bg.label = label;
+            bg.addChild(label);
+
+
+            this.clipGroup.addChild(bg);
+    
+          
+        }
+        this.addChild(this.clipGroup);
+        this.lastY = offsetY + Math.floor((this.clips.length - 1) / 5) * height;
+        this.updateButtons();
     }
 
     onLoadComplete(category) {
@@ -119,13 +203,13 @@ class ClipartSelector extends Phaser.Sprite {
         this.clipGroup.removeAll();
         this.clipGroup.y = 0;
       
-        let style = {font: 'Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif', fontSize: '16pt', fill: '#DAB07B', stroke: '#000', strokeThickness: 4 };
+        let style = {font: 'Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif', fontSize: '22pt', fill: '#DAB07B', stroke: '#000', strokeThickness: 4 };
 
         for (let i = 0; i < this.clips.length; i++) {
            
            
-            let xx = offsetX + (i % 4) * width;
-            let yy = offsetY + Math.floor(i / 4) * height;
+            let xx = offsetX + (i % 5) * width;
+            let yy = offsetY + Math.floor(i / 5) * height;
             let bg = this.game.add.image(xx, yy, 'mainMenu', 'picture_bg');
             
             let pic = this.game.add.image(bg.width / 2, bg.height / 2, this.clips[i].texture, this.clips[i].frame);
@@ -154,7 +238,7 @@ class ClipartSelector extends Phaser.Sprite {
           
         }
         this.addChild(this.clipGroup);
-        this.lastY = offsetY + Math.floor((this.clips.length - 1) / 4) * height;
+        this.lastY = offsetY + Math.floor((this.clips.length - 1) / 5) * height;
         this.updateButtons();
     }
 
@@ -172,7 +256,7 @@ slide(direction) {
         return;
     
     this.game.audio.playSound('click');
-    var height = direction === 'up' ? -600 : 600;
+    var height = direction === 'up' ? -1000 : 1000;
 
 
     if (this.clipGroup.y + height < -(this.lastY + 50) || this.clipGroup.y + height > 0) 

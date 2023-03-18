@@ -32,11 +32,15 @@ class BoxSquare extends Phaser.Sprite {
         this.name = name;
     
         this.inputEnabled = true;
+
         this.input.enableDrag(true);
         this.events.onInputOver.add(this.onMouseOver, this);
         this.events.onInputOut.add(this.onMouseOut, this);
         this.events.onDragUpdate.add(context.onHandleDragUpdate, context);
         this.events.onDragStop.add(context.onDragStop, context);
+        this.events.onDragStart.add(context.onDragStart, this);
+
+        
 
     }
 
@@ -44,7 +48,7 @@ class BoxSquare extends Phaser.Sprite {
         this.game.canvas.style.cursor = 'default';
     }
 
-    onMouseOver(sprite, pointer) {
+    onMouseOver(sprite,pointer) {
         this.game.canvas.style.cursor = MouseCursors[sprite.name];           
     }
 

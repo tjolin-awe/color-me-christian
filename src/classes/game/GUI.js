@@ -1,14 +1,16 @@
-let {ColorButton} = require('./ColorButton');
-let {BrushButton} = require('./BrushButton');
+const {ColorButton} = require('./ColorButton');
+const {BrushButton} = require('./BrushButton');
 const { ClipartCategoryTool } = require('./ClipartCategoriesTool');
 const { ClipartSelector} = require('./ClipartSelector');
 const { FontTool} = require('./FontTool');
-
+const { GameText} = require('./GameText');
+ 
 const ActiveToolEnum = {
     PAINT: 1,
     FLOOD: 2,
     CLIPART: 3,
-    TEXT: 4
+    TEXT: 4,
+    ERASER: 5
 };
 
 Object.freeze(ActiveToolEnum);
@@ -37,10 +39,7 @@ class GUI extends Phaser.Sprite {
 
     
         const fonts = this.game.cache.getJSON('settings').fonts;
-     
-       
-        console.log(fonts);
-        let offsetX = this.width / 2 + 5, offsetY = 550;
+        let offsetX = this.width / 2 + 5, offsetY = 720;
 
         this.fontGroup = this.game.add.group();
         this.fontTool = new FontTool(this.game, offsetX, offsetY, fonts, context);
@@ -52,7 +51,7 @@ class GUI extends Phaser.Sprite {
     }
     
     initColors() {
-        let textColors = this.game.add.image(this.width / 2, 25, 'game', 'text_colors');
+        let textColors = this.game.add.image(this.width / 2, 50, 'game', 'text_colors');
         textColors.anchor.setTo(0.5);
         this.addChild(textColors);
 
@@ -77,7 +76,7 @@ class GUI extends Phaser.Sprite {
         this.currentPalette = 0;
 
         let offsetX = 60;
-        let offsetY = 95;
+        let offsetY = 150;
         let width = 72;
         let height = 74;
         this.colors = [];
@@ -88,29 +87,27 @@ class GUI extends Phaser.Sprite {
 
 
         for (let i = 0; i < 16; i++) {
-            console.log(this.palettes[this.currentPalette][i].color);
             let cb = new ColorButton(this.game, i, offsetX + (i % 4) * width, offsetY + Math.floor(i / 4) * height, this.palettes[this.currentPalette][i].color, this.changeSelectedColor, this);
             this.addChild(cb);
             this.colors.push(cb);
         }
 
-        this.changeSelectedColor(this.colors[0]);
+        this.changeSelectedColor(this.colors[0], null, false);
     }
 
     switchPalette() {
-        console.log(`current palette: ${this.currentPalette}`);
         this.game.audio.playSound('click');
 
         for (let i = 0; i < 16; i++) {
             this.colors[i].updateColor(this.palettes[this.currentPalette][i].color);
         }
 
-        this.changeSelectedColor(this.colors[this.paletteSelection[this.currentPalette]])
+        this.changeSelectedColor(this.colors[this.paletteSelection[this.currentPalette]], null, false)
     }
 
     nextPalette(){
 
-        console.log(`current palette: ${this.currentPalette}`)
+       
         this.currentPalette++;
         this.currentPalette = this.currentPalette % this.palettes.length;
 
@@ -119,22 +116,31 @@ class GUI extends Phaser.Sprite {
 
     previousPalette() {
         this.currentPalette--;
-        console.log(this.palettes.length)
         if (this.currentPalette < 0)
             this.currentPalette = this.palettes.length - 1;
 
         this.switchPalette();
     }
 
-    changeSelectedColor(color, pointer) {
+    changeSelectedColor(color, pointer, updateText=true) {
         if(this.selectedColor) {
             this.selectedColor.turnOff();
         }
 
         this.paletteSelection[this.currentPalette] = color.index;
-
         this.selectedColor = color;
 
+        
+        if (updateText) {
+            if (this.game.boundingBox && this.game.boundingBox.clipart) {
+            
+                if (this.game.boundingBox.clipart instanceof GameText) {
+                    let newcolor = `#${color.color.substring(2)}`;
+                    this.game.boundingBox.clipart.addColor(newcolor, 0);
+                    this.game.boundingBox.clipart.currentColor = newcolor;
+                }
+            }
+        }
       
         this.selectedColor.turnOn();
         this.game.audio.playSound('click');
@@ -160,16 +166,16 @@ class GUI extends Phaser.Sprite {
         let sizes = [16, 32, 48, 64];
         let width = [0, 51, 118, 201];
         let offsetX = 60;
-        let offsetY = 520;
+        let offsetY = 720;
         //let width = 74;
         let height = 74;
 
         for (let i = 0; i < 4; i++) {
-            let bb_square = new BrushButton(this.game, offsetX + width[i], offsetY, 'square', sizes[i], this.changeSelectedBrush, this)
+            let bb_square = new BrushButton(this.game, offsetX + width[i], offsetY, 'square', sizes[i], true, this.changeSelectedBrush, this)
             this.addChild(bb_square);
             this.brushes.push(bb_square);
 
-            let bb_round = new BrushButton(this.game, offsetX + width[i], offsetY + 80, 'round', sizes[i], this.changeSelectedBrush, this)
+            let bb_round = new BrushButton(this.game, offsetX + width[i], offsetY + 80, 'round', sizes[i], false, this.changeSelectedBrush, this)
             this.addChild(bb_round);
             this.brushes.push(bb_round);
         }
@@ -198,11 +204,10 @@ class GUI extends Phaser.Sprite {
         if (click)
             this.game.audio.playSound('click');
 
-       
+
         const tool = this.tools[id];
 
         for (const [key, value] of Object.entries(this.tools)) {
-            console.log(key, value);
             value.selectedcallback.call(this, false);
         }
 
@@ -218,23 +223,79 @@ class GUI extends Phaser.Sprite {
     toggleClipTools(isvisible) {
         this.clipartGroup.visible = isvisible;
         this.game.world.bringToTop(this.clipartGroup);
+
+        if (isvisible)
+        if (this.game.bmdContainer) {
+            this.game.bmdContainer.events.onInputOver.add(function() {
+            this.game.canvas.style.cursor = "default"; }, this);
+            this.game.bmdContainer.events.onInputOut.add(function() {
+               
+                this.game.canvas.style.cursor = "default";  
+            }, this);
+        }
     }
          
     toggleTextTools(isvisible) {
         this.fontGroup.visible = isvisible;
         this.game.world.bringToTop(this.fontGroup);
+
+        if (isvisible)
+        if (this.game.bmdContainer) {
+            this.game.bmdContainer.events.onInputOver.add(function() {
+            this.game.canvas.style.cursor = "default"; }, this);
+            this.game.bmdContainer.events.onInputOut.add(function() {
+            
+                this.game.canvas.style.cursor = "default";  
+            }, this);
+        }
    
+    }
+
+    toggleEraserTools(isvisible) {
+        this.brushes.forEach((value, index)=> {
+            value.visible = isvisible;   
+        });
+
+        if (isvisible)
+        if (this.game.bmdContainer) {
+            this.game.bmdContainer.events.onInputOver.add(function() {
+            this.game.canvas.style.cursor = "url('assets/cursors/toolEraser.png'), default"; }, this);
+            this.game.bmdContainer.events.onInputOut.add(function() {
+              
+                this.game.canvas.style.cursor = "default";  
+            }, this);
+        }
     }
         
     togglePaintTools(isvisible){
         this.brushes.forEach((value, index)=> {
             value.visible = isvisible;
         });
+
+     
+        if (isvisible)
+        if (this.game.bmdContainer) {
+            this.game.bmdContainer.events.onInputOver.add(function() {
+            this.game.canvas.style.cursor = "url('assets/cursors/toolBrush.png'), default"; }, this);
+            this.game.bmdContainer.events.onInputOut.add(function() {
+                this.game.canvas.style.cursor = "default";  
+            }, this);
+        }
+
        
         
     }
     toggleFloodTools(isvisible) {
-    
+
+
+        if (isvisible)
+        if (this.game.bmdContainer) {
+            this.game.bmdContainer.events.onInputOver.add(function() {
+            this.game.canvas.style.cursor = "url('assets/cursors/toolFill.png'), default"; }, this);
+            this.game.bmdContainer.events.onInputOut.add(function() {
+                this.game.canvas.style.cursor = "default";  
+            }, this);
+        }
     }
     
 
@@ -274,15 +335,13 @@ class GUI extends Phaser.Sprite {
         tool.id = id;
         tool.events.onInputUp.add(this.onToolButtonClicked, this);
         this.tools[id] = tool;
-
-        console.log(tool);
         return tool;
     }
 
    
     initButtons(callback, context) {
      
-        let posY = 420;
+        let posY = 525;
         let buffer = 32;
 
         this.tools = {};
@@ -290,8 +349,10 @@ class GUI extends Phaser.Sprite {
         this.addChild(this.createTool(ActiveToolEnum.PAINT, 'palette',this.width / 4 - buffer, posY, this.togglePaintTools));
         this.addChild(this.createTool(ActiveToolEnum.FLOOD, 'floodfill',this.width / 2 - buffer - 4, posY, this.toggleFloodTools));
         this.addChild(this.createTool(ActiveToolEnum.TEXT,'text', this.width / 2 + buffer + 8, posY, this.toggleTextTools));
-        this.addChild(this.createTool(ActiveToolEnum.CLIPART,'clipart',this.width - this.width / 4 + buffer, posY, this.toggleClipTools));
-     
+        this.addChild(this.createTool(ActiveToolEnum.ERASER, 'eraser',this.width - this.width / 4 + buffer, posY , this.toggleEraserTools));
+
+        this.addChild(this.createTool(ActiveToolEnum.CLIPART,'clipart', this.width /4 - buffer, posY + 64, this.toggleClipTools));
+       
         this.toolBorder = this.game.add.image(0, 0, 'tool_border');
         this.toolBorder.anchor.setTo(0.5);
         this.toolBorder.scale.setTo(0.75);
@@ -301,31 +362,43 @@ class GUI extends Phaser.Sprite {
       
         this.tools[ActiveToolEnum.CLIPART].visible = !this.game.noclips;
 
-        let offsetY = 650;
+        let offsetY = 900;
 
 
       
-        let save = this.game.add.button(40, offsetY, 'game', callback, context, 'button_save_on', 'button_save_off');
-        
+        let save = this.game.add.button(this.width / 3, offsetY, 'game', callback, context, 'button_save_on', 'button_save_off');
+        save.anchor.setTo(0.5,0);
+        save.scale.setTo(1.5);
         this.addChild(save);
 
-        let clear = this.game.add.button(130, offsetY, 'game', function(){
+        let clear = this.game.add.button(this.width/ 3, offsetY + 70, 'game', function(){
             this.game.state.start('GameState');
             this.game.audio.playSound('dustbin');
         }, this, 'button_clear_on', 'button_clear_off');
+        clear.anchor.setTo(0.5,0);
+        clear.scale.setTo(1.5);
         this.addChild(clear);
+        
+        let print = this.game.add.button((this.width - this.width / 3) + 20, offsetY, 'game', 
+            context.print, context, 'button_print_on', 'button_print_off');
 
-        let quit = this.game.add.button(220, offsetY, 'game', function(){
+        print.anchor.setTo(0.5,0);
+        print.scale.setTo(1.5);
+        this.addChild(print);
+
+        let quit = this.game.add.button((this.width - this.width / 3) + 20, offsetY + 70, 'game', function(){
             this.game.state.start('MainMenuState');
             this.game.audio.playSound('click');
         }, this, 'button_quit_on', 'button_quit_off');
+        quit.anchor.setTo(0.5,0);
+        quit.scale.setTo(1.5);
         this.addChild(quit);
     } 
 
     initClipart(context) {
     
         let categories = this.game.cache.getJSON('settings').clipartCategories;
-        let offsetX = this.width / 2 + 5, offsetY = 550;
+        let offsetX = this.width / 2 + 5, offsetY = 720;
 
         this.clipartTool = new ClipartCategoryTool(this.game, offsetX, offsetY, categories, context.openClipartSelector, context);
         this.clipartGroup.addChild(this.clipartTool);

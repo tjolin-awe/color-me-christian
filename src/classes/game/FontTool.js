@@ -26,8 +26,6 @@ class FontTool extends Phaser.Sprite {
         bar.anchor.setTo(0.5);
         this.addChild(bar);
         this.sampleText = this.game.add.text(-1, 66, this.fonts[0].name, newstyle);
-
-        console.log(this.sampleText);
         this.sampleText.anchor.setTo(0.5);
         this.sampleText.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
 
@@ -94,7 +92,7 @@ class FontTool extends Phaser.Sprite {
           
             this.game.boundingBox.clipart.setStyle({font: font, fill: this.game.boundingBox.clipart.currentColor, boundsAlignH: "center", boundsAlignV: "middle"}, true);
             this.game.boundingBox.clipart.fontIndex = this.index;
-            this.game.boundingBox.updatePositions();
+            this.game.boundingBox.drawBounds();
          }
             this.sampleText.setText(this.fonts[this.index].name);
            

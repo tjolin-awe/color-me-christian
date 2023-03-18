@@ -42,8 +42,8 @@ class PreloadState {
         this.game.load.image('font_icon_on','assets/images/font_on.png');
         this.game.load.image('font_icon_off','assets/images/font_off.png');
         this.game.load.image('tool_border', 'assets/images/tool_border.png');
-    
-        
+        this.game.load.image('eraser', 'assets/images/eraser.png');
+
         // pictures
         let pictures = this.game.cache.getJSON('settings').pictures;
         for (let i = 0; i < pictures; i++) {

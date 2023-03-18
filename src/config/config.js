@@ -1,7 +1,7 @@
 let config = {
     gameParentElementId: 'colour-me-christian',
-    gameWidth:  1280,
-    gameHeight: 720,
+    gameWidth:  1680,
+    gameHeight: 1050,
     displayOrientation: 'landscape',
     lockOrientation: false,
     storagePrefix: 'cmc_',

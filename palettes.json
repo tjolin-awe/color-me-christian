@@ -202,12 +202,8 @@
     [
         {
             "color": "0xFAFAD2"
-            
-            
-            
         },
         {
-            
             "color": "0xEEE8AA"
         },
         {
@@ -218,9 +214,6 @@
         },
         {
             "color": "0xFFD700"
-            
-            
-            
         },
         {
             "color": "0xFFA500"
@@ -233,9 +226,6 @@
         },
         {
             "color": "0xD2691E"
-            
-            
-            
         },
         {
             "color": "0x8B4513"
@@ -248,8 +238,6 @@
         },
         {
             "color": "0xD4AF37"
-            
-            
         },
         {
             "color": "0xCFB53B"
@@ -258,23 +246,14 @@
             "color": "0xE6BE8A"
         },
         {
-            
             "color": "0x996515"
         }
-    ]
-    ,
+    ],
     [
         {
             "color": "0x7CFC00"
-            
-            
-            
-            
-            
-            
         },
         {
-            
             "color": "0x7FFF00"
         },
         {
@@ -285,12 +264,6 @@
         },
         {
             "color": "0x228B22"
-            
-            
-            
-            
-            
-            
         },
         {
             "color": "0x008000"
@@ -303,11 +276,6 @@
         },
         {
             "color": "0x9ACD32"
-            
-            
-            
-            
-            
         },
         {
             "color": "0x00FF7F"
@@ -316,15 +284,10 @@
             "color": "0x00FA9A"
         },
         {
-            
             "color": "0x90EE90"
         },
         {
             "color": "0x98FB98"
-            
-            
-            
-            
         },
         {
             "color": "0x8FBC8F"
@@ -333,28 +296,307 @@
             "color": "0x3CB371"
         },
         {
-            
-            
             "color": "0x20B2AA"
+        }
+    ],
+    [
+        {
+            "color": "0xFAFAD2"
+        },
+        {
+            "color": "0xEEE8AA"
+        },
+        {
+            "color": "0xF0E68C"
+        },
+        {
+            "color": "0xDAA520"
+        },
+        {
+            "color": "0xFFD700"
+        },
+        {
+            "color": "0xFFA500"
+        },
+        {
+            "color": "0xFF8C00"
+        },
+        {
+            "color": "0xCD853F"
+        },
+        {
+            "color": "0xD2691E"
+        },
+        {
+            "color": "0x8B4513"
+        },
+        {
+            "color": "0xA0522D"
+        },
+        {
+            "color": "0xFFDF00"
+        },
+        {
+            "color": "0xD4AF37"
+        },
+        {
+            "color": "0xCFB53B"
+        },
+        {
+            "color": "0xE6BE8A"
+        },
+        {
+            "color": "0x996515"
+        }
+    ],
+    [
+        {
+            "color": "0x800000"
+        },
+        {
+            "color": "0x8B0000"
+        },
+        {
+            "color": "0xA52A2A"
+        },
+        {
+            "color": "0xB22222"
+        },
+        {
+            "color": "0xDC143C"
+        },
+        {
+            "color": "0xFF7F50"
+        },
+        {
+            "color": "0xFF6347"
+        },
+        {
+            "color": "0xFF4500"
+        },
+        {
+            "color": "0xFFD700"
+        },
+        {
+            "color": "0xFF8C00"
+        },
+        {
+            "color": "0xFFC0CB"
+        },
+        {
+            "color": "0xFFB6C1"
+        },
+        {
+            "color": "0xFF69B4"
+        },
+        {
+            "color": "0xFF1493"
+        },
+        {
+            "color": "0xDB7093"
+        },
+        {
+            "color": "0xC71585"
+        }
+    ],
+    [
+        {
+            "color": "0xE6E6FA"
+        },
+        {
+            "color": "0xD8BFD8"
+        },
+        {
+            "color": "0xDDA0DD"
+        },
+        {
+            "color": "0xEE82EE"
+        },
+        {
+            "color": "0xDA70D6"
+        },
+        {
+            "color": "0xFF00FF"
+        },
+        {
+            "color": "0xFF00FF"
+        },
+        {
+            "color": "0xBA55D3"
+        },
+        {
+            "color": "0x9370DB"
+        },
+        {
+            "color": "0x8A2BE2"
+        },
+        {
+            "color": "0x9400D3"
+        },
+        {
+            "color": "0x9932CC"
+        },
+        {
+            "color": "0x8B008B"
+        },
+        {
+            "color": "0x800080"
+        },
+        {
+            "color": "0x4B0082"
+        },
+        {
+            "color": "0xFFF0F5"
+        }
+    ],
+    [
+        {
+            "color": "0xFFA07A"
+        },
+        {
+            "color": "0xFA8072"
+        },
+        {
+            "color": "0xE9967A"
+        },
+        {
+            "color": "0xF08080"
+        },
+        {
+            "color": "0xCD5C5C"
+        },
+        {
+            "color": "0xDC143C"
+        },
+        {
+            "color": "0xB22222"
+        },
+        {
+            "color": "0xFF0000"
+        },
+        {
+            "color": "0x8B0000"
+        },
+        {
+            "color": "0x800000"
+        },
+        {
+            "color": "0xFF6347"
+        },
+        {
+            "color": "0xFF4500"
+        },
+        {
+            "color": "0xDB7093"
+        },
+        {
+            "color": "0xFF234F"
+        },
+        {
+            "color": "0xFF2E1C"
+        },
+        {
+            "color": "0xFF7091"
+        }
+    ],
+    [
+        {
+            "color": "0xFFFFFF"
+        },
+        {
+            "color": "0xFFFAFA"
+        },
+        {
+            "color": "0xF0FFF0"
+        },
+        {
+            "color": "0xF5FFFA"
+        },
+        {
+            "color": "0xF0FFFF"
+        },
+        {
+            "color": "0xF0F8FF"
+        },
+        {
+            "color": "0xF8F8FF"
+        },
+        {
+            "color": "0xF5F5F5"
+        },
+        {
+            "color": "0xFFF5EE"
+        },
+        {
+            "color": "0xF5F5DC"
+        },
+        {
+            "color": "0xFDF5E6"
+        },
+        {
+            "color": "0xFFFAF0"
+        },
+        {
+            "color": "0xFFFFF0"
+        },
+        {
+            "color": "0xFAEBD7"
+        },
+        {
+            "color": "0xFAF0E6"
+        },
+        {
+            "color": "0xFFF0F5"
+        }
+    ],
+    [
+        {
+            "color": "0x000000"
+        },
+        {
+            "color": "0x696969"
+        },
+        {
+            "color": "0x808080"
+        },
+        {
+            "color": "0xA9A9A9"
+        },
+        {
+            "color": "0xC0C0C0"
+        },
+        {
+            "color": "0xDCDCDC"
+        },
+        {
+            "color": "0xD3D3D3"
+        },
+        {
+            "color": "0xA9A9A9"
+        },
+        {
+            "color": "0x778899"
+        },
+        {
+            "color": "0x708090"
+        },
+        {
+            "color": "0x303030"
+        },
+        {
+            "color": "0x383838"
+        },
+        {
+            "color": "0x404040"
+        },
+        {
+            "color": "0x484848"
+        },
+        {
+            "color": "0x505050"
+        },
+        {
+            "color": "0x585858"
         }
     ]
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	

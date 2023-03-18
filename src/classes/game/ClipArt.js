@@ -1,3 +1,5 @@
+const { Rectangle } = require("phaser-ce");
+
 class Clipart extends Phaser.Sprite {
     constructor(game, x, y, texture, frame, pointer, context) {
         super(game, x, y, texture,frame);       
@@ -9,7 +11,14 @@ class Clipart extends Phaser.Sprite {
         this.input.useHandCursor = true;
         this.input.pixelPerfectClick = true;
         this.preserveRatio = true;
+     
+        this.originalWidth = this.width;
+        this.originalHeight = this.height;
 
+        this.originalTexture = texture;
+        this.originalFrame = frame;
+
+        this.anchor.setTo(0.5);
         this.stamped = false;
         this.identifier = Math.floor(Math.random() * Date.now());
 
@@ -39,15 +48,20 @@ class Clipart extends Phaser.Sprite {
 
     }
 
+
     
     onDragClipart(clipart, pointer) {
 
-        this.game.boundingBox.updatePositions();
+        
+
+        this.game.boundingBox.updateBounds();
+        this.game.boundingBox.drawBounds();
         
     }
 
     onDragStart(clipart, pointer) {
 
+        
         for (let i = 0; i < this.game.art_sprites.children.length; i++) {
             const child = this.game.art_sprites.children[i];
             if (child.Id != clipart.Id)

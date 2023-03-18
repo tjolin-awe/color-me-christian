@@ -6,7 +6,14 @@ class MainMenuState {
         this.game = game;
     }
 
+   
+
     create() {
+
+
+        
+        
+
         //this.game.add.image(0, 0, 'mainMenu', 'bg');
         this.game.add.image(0,0, 'bg');
         //this.game.add.image(this.game.world.centerX, 100, 'mainMenu', 'title').anchor.setTo(0.5);
@@ -22,8 +29,7 @@ class MainMenuState {
 
         }, this, 'button_studio_choose_on', 'button_studio_choose_off');
         play.anchor.setTo(0.5);
-        play.scale.setTo(0.75);
-
+       
         let random = this.game.add.button(this.game.world.centerX, play.y + play.height + 10, 'studio_buttons', function(){
             let pictures = this.game.cache.getJSON('settings').pictures;
             this.game.currentPicture = irandomRange(1, pictures);
@@ -32,13 +38,11 @@ class MainMenuState {
 
         }, this, 'button_studio_random_on', 'button_studio_random_off');
         random.anchor.setTo(0.5);
-        random.scale.setTo(0.75);
-
+  
         let studio = this.game.add.button(this.game.world.centerX, random.y + random.height + 10, 'studio_buttons', function(){
             let pictures = this.game.cache.getJSON('settings').pictures;
             this.game.currentPicture = null;
             this.game.audio.playSound('click');
-            console.log('played from MainMenuState');
             this.game.state.start('StudioLoadState');
             
         }, this, 'button_studio_on', 'button_studio_off');
@@ -46,7 +50,7 @@ class MainMenuState {
 
 
         studio.anchor.setTo(0.5);
-        studio.scale.setTo(0.75);
+      
 
         let music = new AudioSwitch(this.game, {
             x: this.game.world.width - 50,

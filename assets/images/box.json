@@ -3,8 +3,8 @@
     {
       "filename": "delete",
       "frame": {
-        "x": 2,
-        "y": 2,
+        "x": 1,
+        "y": 1,
         "w": 32,
         "h": 32
       },
@@ -28,8 +28,8 @@
     {
       "filename": "delete_hover",
       "frame": {
-        "x": 2,
-        "y": 38,
+        "x": 1,
+        "y": 35,
         "w": 32,
         "h": 32
       },
@@ -53,8 +53,8 @@
     {
       "filename": "down",
       "frame": {
-        "x": 2,
-        "y": 74,
+        "x": 1,
+        "y": 69,
         "w": 32,
         "h": 32
       },
@@ -78,8 +78,58 @@
     {
       "filename": "down_hover",
       "frame": {
-        "x": 2,
-        "y": 110,
+        "x": 1,
+        "y": 103,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "flip",
+      "frame": {
+        "x": 1,
+        "y": 137,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "flip_hover",
+      "frame": {
+        "x": 1,
+        "y": 171,
         "w": 32,
         "h": 32
       },
@@ -103,8 +153,8 @@
     {
       "filename": "handle",
       "frame": {
-        "x": 2,
-        "y": 146,
+        "x": 1,
+        "y": 205,
         "w": 32,
         "h": 32
       },
@@ -128,8 +178,8 @@
     {
       "filename": "handle_locked",
       "frame": {
-        "x": 2,
-        "y": 182,
+        "x": 1,
+        "y": 239,
         "w": 32,
         "h": 32
       },
@@ -153,8 +203,8 @@
     {
       "filename": "lock",
       "frame": {
-        "x": 2,
-        "y": 218,
+        "x": 1,
+        "y": 273,
         "w": 32,
         "h": 32
       },
@@ -178,8 +228,108 @@
     {
       "filename": "lock_hover",
       "frame": {
-        "x": 2,
-        "y": 254,
+        "x": 1,
+        "y": 307,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "rotate",
+      "frame": {
+        "x": 1,
+        "y": 341,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "rotate_cc",
+      "frame": {
+        "x": 1,
+        "y": 375,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "rotate_cc_hover",
+      "frame": {
+        "x": 1,
+        "y": 409,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "rotate_hover",
+      "frame": {
+        "x": 1,
+        "y": 443,
         "w": 32,
         "h": 32
       },
@@ -203,8 +353,8 @@
     {
       "filename": "stamp",
       "frame": {
-        "x": 2,
-        "y": 290,
+        "x": 1,
+        "y": 477,
         "w": 32,
         "h": 32
       },
@@ -228,8 +378,8 @@
     {
       "filename": "stamp_hover",
       "frame": {
-        "x": 2,
-        "y": 326,
+        "x": 1,
+        "y": 511,
         "w": 32,
         "h": 32
       },
@@ -253,8 +403,8 @@
     {
       "filename": "unlock",
       "frame": {
-        "x": 2,
-        "y": 362,
+        "x": 1,
+        "y": 545,
         "w": 32,
         "h": 32
       },
@@ -278,8 +428,8 @@
     {
       "filename": "unlock_hover",
       "frame": {
-        "x": 2,
-        "y": 398,
+        "x": 1,
+        "y": 579,
         "w": 32,
         "h": 32
       },
@@ -303,8 +453,8 @@
     {
       "filename": "up",
       "frame": {
-        "x": 2,
-        "y": 434,
+        "x": 1,
+        "y": 613,
         "w": 32,
         "h": 32
       },
@@ -328,8 +478,8 @@
     {
       "filename": "up_hover",
       "frame": {
-        "x": 2,
-        "y": 470,
+        "x": 1,
+        "y": 647,
         "w": 32,
         "h": 32
       },
@@ -357,8 +507,8 @@
     "image": "box.png",
     "format": "RGBA8888",
     "size": {
-      "w": 36,
-      "h": 504
+      "w": 34,
+      "h": 680
     },
     "scale": 1
   }
